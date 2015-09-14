@@ -31,7 +31,7 @@
         imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         imagePickerController.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     }
-    [self presentViewController:imagePickerController animated:YES completion:nil];
+    [self.navigationController presentViewController:imagePickerController animated:YES completion:nil];
 }
 
 - (IBAction)cameraRollButtonTapped:(UIButton *)sender {
@@ -50,12 +50,12 @@
     
     self.cameraRollButton.hidden = NO;
     self.imageView.image = (UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage];
-    [self dismissViewControllerAnimated:picker completion:nil];
+    [self.navigationController dismissViewControllerAnimated:picker completion:nil];
     
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 
