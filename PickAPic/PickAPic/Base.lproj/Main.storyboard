@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zmH-fm-EdE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
@@ -34,11 +34,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvz-hE-amF">
-                                <rect key="frame" x="0.0" y="64" width="600" height="436"/>
+                                <rect key="frame" x="30" y="94" width="540" height="406"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Photo Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1j-N6-lLO">
+                                        <rect key="frame" x="0.0" y="0.0" width="540" height="406"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="X1j-N6-lLO" firstAttribute="top" secondItem="fvz-hE-amF" secondAttribute="top" id="Kka-w0-tK5"/>
+                                    <constraint firstAttribute="bottom" secondItem="X1j-N6-lLO" secondAttribute="bottom" id="X7W-Nm-Z6g"/>
+                                    <constraint firstAttribute="trailing" secondItem="X1j-N6-lLO" secondAttribute="trailing" id="mje-Z8-Yb9"/>
+                                    <constraint firstItem="X1j-N6-lLO" firstAttribute="leading" secondItem="fvz-hE-amF" secondAttribute="leading" id="qkI-Vr-sQM"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6O-Ty-Uiw">
-                                <rect key="frame" x="259" y="532" width="83" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vv3-eZ-9Ue">
+                                <rect key="frame" x="30" y="94" width="540" height="406"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6O-Ty-Uiw">
+                                <rect key="frame" x="259" y="530" width="83" height="30"/>
                                 <state key="normal" title="Camera Roll"/>
                                 <connections>
                                     <action selector="cameraRollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5rr-0g-9wZ"/>
@@ -47,15 +64,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="b6O-Ty-Uiw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5em-Rd-HJn"/>
+                            <constraint firstItem="vv3-eZ-9Ue" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="Cuq-6L-0eo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fvz-hE-amF" secondAttribute="bottom" constant="100" id="QPg-ir-XLd"/>
-                            <constraint firstAttribute="trailing" secondItem="fvz-hE-amF" secondAttribute="trailing" id="fce-xE-LHa"/>
-                            <constraint firstItem="fvz-hE-amF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iaJ-Xm-RBL"/>
-                            <constraint firstItem="fvz-hE-amF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rzc-UP-clU"/>
+                            <constraint firstItem="b6O-Ty-Uiw" firstAttribute="top" secondItem="fvz-hE-amF" secondAttribute="bottom" constant="30" id="Rhd-IC-0f2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vv3-eZ-9Ue" secondAttribute="bottom" constant="100" id="ewJ-3C-pNf"/>
+                            <constraint firstAttribute="trailing" secondItem="fvz-hE-amF" secondAttribute="trailing" constant="30" id="fce-xE-LHa"/>
+                            <constraint firstItem="fvz-hE-amF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="iaJ-Xm-RBL"/>
+                            <constraint firstItem="vv3-eZ-9Ue" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="mSF-W8-K1S"/>
+                            <constraint firstItem="fvz-hE-amF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="rzc-UP-clU"/>
+                            <constraint firstAttribute="trailing" secondItem="vv3-eZ-9Ue" secondAttribute="trailing" constant="30" id="x7X-QR-upw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4gN-tj-WYI"/>
                     <connections>
                         <outlet property="cameraRollPhotoImageView" destination="fvz-hE-amF" id="Ntg-Et-FLi"/>
+                        <outlet property="imageView" destination="vv3-eZ-9Ue" id="eWj-Hp-bRq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
