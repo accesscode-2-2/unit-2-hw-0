@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "SocialMediaView.h"
 #import "SocialMediaViewDelegate.h"
+
 @interface ViewController () <SocialMediaViewDelegate>
+
 @property (weak, nonatomic) IBOutlet SocialMediaView *socialMediaView;
 
 @end
@@ -19,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.socialMediaView.delegate = self;
+    self.commentButton.backgroundColor = [UIColor greenColor];
+    self.likeButton.backgroundColor = [UIColor blueColor];
+    self.shareButton.backgroundColor = [UIColor redColor];
 }
 
 

@@ -12,6 +12,7 @@
 
 @implementation SocialMediaView
 
+
 - (IBAction)commentButtonTapped:(UIButton *)sender {
     [self.delegate socialMediaViewDidTapCommentButton:self];
 }
