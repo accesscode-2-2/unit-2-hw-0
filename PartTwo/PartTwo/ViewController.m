@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "SocialMediaView.h"
+#import "ButtonPressedProtocol.h"
 
-@interface ViewController ()
+@interface ViewController () <ButtonPressedProtocol>
+
+@property (nonatomic) id selectedColor;
 
 @end
 
@@ -16,12 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+ 
+    self.view.backgroundColor = [UIColor blackColor];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view {
+    //  self.view.backgroundColor
+    
+}
+
+- (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view {
+    //  self.view.backgroundColor
+}
+
+- (void)socialMediaViewDidTapShareButton:(SocialMediaView *)view {
+    //  self.view.backgroundColor
 }
 
 @end
