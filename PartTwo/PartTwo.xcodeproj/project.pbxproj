@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B6CBB491BA8883700BEBB16 /* SocialMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6CBB481BA8883700BEBB16 /* SocialMediaView.m */; settings = {ASSET_TAGS = (); }; };
 		8DD103491BA66E0900CE483B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103481BA66E0900CE483B /* main.m */; };
 		8DD1034C1BA66E0900CE483B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1034B1BA66E0900CE483B /* AppDelegate.m */; };
 		8DD1034F1BA66E0900CE483B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1034E1BA66E0900CE483B /* ViewController.m */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B6CBB471BA8883700BEBB16 /* SocialMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaView.h; sourceTree = "<group>"; };
+		3B6CBB481BA8883700BEBB16 /* SocialMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaView.m; sourceTree = "<group>"; };
+		3B6CBB4A1BA8885000BEBB16 /* SocialMediaViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaViewDelegate.h; sourceTree = "<group>"; };
 		8DD103441BA66E0900CE483B /* PartTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD103481BA66E0900CE483B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DD1034A1BA66E0900CE483B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +107,9 @@
 			children = (
 				8DD1034A1BA66E0900CE483B /* AppDelegate.h */,
 				8DD1034B1BA66E0900CE483B /* AppDelegate.m */,
+				3B6CBB471BA8883700BEBB16 /* SocialMediaView.h */,
+				3B6CBB481BA8883700BEBB16 /* SocialMediaView.m */,
+				3B6CBB4A1BA8885000BEBB16 /* SocialMediaViewDelegate.h */,
 				8DD1034D1BA66E0900CE483B /* ViewController.h */,
 				8DD1034E1BA66E0900CE483B /* ViewController.m */,
 				8DD103501BA66E0900CE483B /* Main.storyboard */,
@@ -272,6 +279,7 @@
 			files = (
 				8DD1034F1BA66E0900CE483B /* ViewController.m in Sources */,
 				8DD1034C1BA66E0900CE483B /* AppDelegate.m in Sources */,
+				3B6CBB491BA8883700BEBB16 /* SocialMediaView.m in Sources */,
 				8DD103491BA66E0900CE483B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +506,7 @@
 				8DD103731BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DD103741BA66E0900CE483B /* Build configuration list for PBXNativeTarget "PartTwoTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +515,7 @@
 				8DD103761BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DD103771BA66E0900CE483B /* Build configuration list for PBXNativeTarget "PartTwoUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +524,7 @@
 				8DD103791BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
