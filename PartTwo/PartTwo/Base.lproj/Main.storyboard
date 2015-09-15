@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tne-ii-9AA" customClass="SocialMediaView">
+                                <rect key="frame" x="201" y="213" width="199" height="174"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytf-fC-4HP">
+                                        <rect key="frame" x="66" y="25" width="67" height="30"/>
+                                        <state key="normal" title="Comment"/>
+                                        <connections>
+                                            <action selector="commentButtonTapped" destination="tne-ii-9AA" eventType="touchUpInside" id="ArV-nU-jc8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7r-a0-PXf">
+                                        <rect key="frame" x="84" y="72" width="30" height="30"/>
+                                        <state key="normal" title="Like"/>
+                                        <connections>
+                                            <action selector="likeButtonTapped" destination="tne-ii-9AA" eventType="touchUpInside" id="TQd-I7-V7h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lq8-bp-sb6">
+                                        <rect key="frame" x="79" y="119" width="40" height="30"/>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="shareButtonTapped" destination="tne-ii-9AA" eventType="touchUpInside" id="6Rb-t3-bBE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="G7r-a0-PXf" firstAttribute="top" secondItem="ytf-fC-4HP" secondAttribute="bottom" constant="17" id="9Bu-RI-RIW"/>
+                                    <constraint firstItem="Lq8-bp-sb6" firstAttribute="centerX" secondItem="tne-ii-9AA" secondAttribute="centerX" id="Yze-VW-7AG"/>
+                                    <constraint firstItem="G7r-a0-PXf" firstAttribute="centerY" secondItem="tne-ii-9AA" secondAttribute="centerY" id="ZXJ-Da-JrD"/>
+                                    <constraint firstAttribute="height" constant="174" id="ahb-KA-FLX"/>
+                                    <constraint firstItem="Lq8-bp-sb6" firstAttribute="top" secondItem="G7r-a0-PXf" secondAttribute="bottom" constant="17" id="mYu-ft-u3O"/>
+                                    <constraint firstItem="ytf-fC-4HP" firstAttribute="centerX" secondItem="tne-ii-9AA" secondAttribute="centerX" id="mjl-Vd-iul"/>
+                                    <constraint firstItem="G7r-a0-PXf" firstAttribute="centerX" secondItem="tne-ii-9AA" secondAttribute="centerX" id="psz-Mn-MGp"/>
+                                    <constraint firstAttribute="width" constant="199" id="xcq-iZ-Fju"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tne-ii-9AA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Zs-ar-h3z"/>
+                            <constraint firstItem="tne-ii-9AA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rum-fh-o4u"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SocialMediaView" destination="tne-ii-9AA" id="VX7-Vc-Pot"/>
+                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="4kn-Eg-cIH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="387"/>
         </scene>
     </scenes>
 </document>
