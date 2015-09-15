@@ -12,9 +12,7 @@
 @implementation SocialMediaView
 
 
-
 @synthesize delegate;
-
 
 
 - (IBAction)comment:(id)sender {
