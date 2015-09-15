@@ -7,17 +7,41 @@
 //
 
 #import "ViewController.h"
+#import "SocialMediaDelegate.h"
+#import "SocialMediaView.h"
 
-@interface ViewController ()
+@interface ViewController () <UINavigationControllerDelegate, SocialMediaDelegate>
+
+@property (weak, nonatomic) IBOutlet SocialMediaView *view;
 
 @end
 
 @implementation ViewController
 
+@dynamic view;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.delegate = self;
 }
+
+
+-(void)socialMediaViewDidTapLikeButton:(CIColor *)likeColor {
+    self.view.backgroundColor = [UIColor colorWithCIColor:likeColor];
+    
+}
+- (void)socialMediaViewDidTapCommentButton:(CIColor *)commentColor {
+    
+}
+- (void)socialMediaViewDidTapShareButton:(CIColor *)shareColor {
+    
+}
+
+- (void)testing: (NSString *)stringTest{
+    NSLog(@"%@",stringTest);
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
