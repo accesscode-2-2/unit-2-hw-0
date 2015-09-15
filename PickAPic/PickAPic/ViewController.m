@@ -33,22 +33,30 @@
     NSArray *albumType = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
     NSArray *libraryType = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     
+    // nslog to see what images are available/selected
     NSLog(@"Available types in album: %@", albumType);
     NSLog(@"Available types in library: %@", libraryType);
     
+    //only allow images from the default images from apple (?) 
     NSArray *typesAllowed = @[@"public.image"];
     [imagePicker setMediaTypes:typesAllowed];
     
     imagePicker.delegate = self;
-    
+    // displays new vc without having to put a new one in storyboard
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
+// method that displays image after selection, also dismisses previous vc.
+// finds image matching the string, using original image because it's default(?) 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
     
     self.imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     
+    
+    // use setNeedsDisplay only when overriding drawRect in a subclass of UIView
+    // i think it's also used since we're only working with one view?
+    // stackoverflow says it should be called when changing a small amount of variables , which then allows drawRect to redraw the changed code?
     [self.view setNeedsDisplay];
 }
 
