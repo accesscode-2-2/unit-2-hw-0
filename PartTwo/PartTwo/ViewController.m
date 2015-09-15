@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "SocialMediaView.h"
+#import "SocialMediaViewDelegate.h"
 
-@interface ViewController () 
+@interface ViewController () <SocialMediaViewDelegate>
 
 
 @property (strong, nonatomic) IBOutlet SocialMediaView *socialMediaView;
@@ -19,32 +20,22 @@
 
 @implementation ViewController
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-        
-    self.socialMediaView.delegate = self;
-    NSLog(@"%@",self.socialMediaView.delegate);
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-   
+    self.socialMediaView.delegate = self;
 }
 
 #pragma mark - Social Media View delegate methods
 
-//like button = blue, comment button = green, share button = red
-- (void)socialMediaViewDidTapCommentButton:(id)view{
+- (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view{
     self.view.backgroundColor = [UIColor greenColor];
-
 }
 
-- (void)socialMediaViewDidTapLikeButton:(id)view{
+- (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view{
     self.view.backgroundColor = [UIColor blueColor];
 }
 
-- (void)socialMediaViewDidTapShareButton:(id)view{
+- (void)socialMediaViewDidTapShareButton:(SocialMediaView *)view{
     self.view.backgroundColor = [UIColor redColor];
 }
 

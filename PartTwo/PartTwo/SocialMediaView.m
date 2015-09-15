@@ -10,13 +10,6 @@
 
 @implementation SocialMediaView
 
-//- (id)initWithFrame:(CGRect)frame{
-//    if(self == [super initWithFrame:frame]){
-//        //
-//    }
-//    return self;
-//}
-
 - (IBAction)commentButtonTapped:(UIButton *)sender {
     [self.delegate socialMediaViewDidTapCommentButton:self];
     NSLog(@"Comment section, delegate is: %@",self.delegate);
