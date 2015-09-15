@@ -85,6 +85,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="2h0-K1-aFW" secondAttribute="trailing" constant="100" id="zaT-R1-rla"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myView" destination="8bC-Xf-vdC" id="71B-IB-STt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

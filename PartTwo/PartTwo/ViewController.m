@@ -12,7 +12,8 @@
 
 @interface ViewController () <ButtonPressedProtocol>
 
-@property (nonatomic) id selectedColor;
+//@property (nonatomic) id selectedColor;
+@property (strong, nonatomic) IBOutlet UIView *myView;
 
 @end
 
@@ -21,23 +22,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+   SocialMediaView *customView = [[SocialMediaView alloc] init];
     
+    // assign delegate
+    customView.delegate = self;
  
-    self.view.backgroundColor = [UIColor blackColor];
+    self.myView.backgroundColor = [UIColor blackColor];
     
 }
 
 - (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view {
-    //  self.view.backgroundColor
+
+    self.myView.backgroundColor = view;
     
 }
 
 - (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view {
-    //  self.view.backgroundColor
+    self.myView.backgroundColor = view;
 }
 
 - (void)socialMediaViewDidTapShareButton:(SocialMediaView *)view {
-    //  self.view.backgroundColor
-}
+  self.myView.backgroundColor = view; }
 
 @end
