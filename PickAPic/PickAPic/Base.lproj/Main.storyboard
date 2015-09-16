@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -16,8 +16,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axm-Ov-LHr">
+                                <rect key="frame" x="259" y="550" width="83" height="30"/>
+                                <state key="normal" title="Camera Roll"/>
+                                <connections>
+                                    <action selector="cameraRollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qIg-hd-nsM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8n8-r9-Fm4">
+                                <rect key="frame" x="0.0" y="20" width="600" height="510"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8n8-r9-Fm4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5pV-Yb-pN4"/>
+                            <constraint firstAttribute="trailing" secondItem="8n8-r9-Fm4" secondAttribute="trailing" id="Qri-jl-NGM"/>
+                            <constraint firstItem="Axm-Ov-LHr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WBi-nN-NiZ"/>
+                            <constraint firstItem="8n8-r9-Fm4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zgw-Er-AKl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Axm-Ov-LHr" secondAttribute="bottom" constant="20" id="k21-Nb-zYx"/>
+                            <constraint firstItem="Axm-Ov-LHr" firstAttribute="top" secondItem="8n8-r9-Fm4" secondAttribute="bottom" constant="20" id="xH8-Dc-drF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="8n8-r9-Fm4" id="KlD-hA-PhG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
