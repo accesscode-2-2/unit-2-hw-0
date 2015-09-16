@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SocialMediaView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vx1-eQ-vFZ">
+                    <rect key="frame" x="0.0" y="150" width="600" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Kpi-jk-V0W"/>
+                        <constraint firstAttribute="width" constant="100" id="huc-Ty-Nki"/>
+                    </constraints>
+                    <state key="normal" title="Like"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="huc-Ty-Nki"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="likeButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="mNR-r3-wlx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqO-iA-7x3">
+                    <rect key="frame" x="0.0" y="350" width="600" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="PML-Ch-UDP"/>
+                        <constraint firstAttribute="height" constant="100" id="fJh-i6-ls6"/>
+                    </constraints>
+                    <state key="normal" title="Share"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="PML-Ch-UDP"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="shareButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="YVQ-Da-6XL"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ud-r2-HAG">
+                    <rect key="frame" x="0.0" y="250" width="600" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="JY2-HW-ATi"/>
+                        <constraint firstAttribute="width" constant="100" id="Xb4-z5-WiN"/>
+                    </constraints>
+                    <state key="normal" title="Comment"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Xb4-z5-WiN"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="commentButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="I8Y-n7-hY6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1Ud-r2-HAG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0X8-2u-Rxg"/>
+                <constraint firstAttribute="trailing" secondItem="wqO-iA-7x3" secondAttribute="trailing" id="4We-ip-YH2"/>
+                <constraint firstItem="wqO-iA-7x3" firstAttribute="top" secondItem="1Ud-r2-HAG" secondAttribute="bottom" id="6Ex-KD-za8"/>
+                <constraint firstItem="1Ud-r2-HAG" firstAttribute="centerX" secondItem="wqO-iA-7x3" secondAttribute="centerX" id="HPR-hU-bnz"/>
+                <constraint firstItem="1Ud-r2-HAG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LkI-AX-lEt"/>
+                <constraint firstAttribute="trailing" secondItem="Vx1-eQ-vFZ" secondAttribute="trailing" id="NZW-px-BxL"/>
+                <constraint firstItem="Vx1-eQ-vFZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PtJ-CE-97P"/>
+                <constraint firstItem="1Ud-r2-HAG" firstAttribute="top" secondItem="Vx1-eQ-vFZ" secondAttribute="bottom" id="Six-zY-FoF"/>
+                <constraint firstAttribute="trailing" secondItem="1Ud-r2-HAG" secondAttribute="trailing" id="Yym-0C-dRo"/>
+                <constraint firstItem="wqO-iA-7x3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eld-lm-XxH"/>
+                <constraint firstItem="1Ud-r2-HAG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hrS-Ma-tgi"/>
+                <constraint firstItem="1Ud-r2-HAG" firstAttribute="centerX" secondItem="Vx1-eQ-vFZ" secondAttribute="centerX" id="qK7-OE-wgE"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -15,6 +15,8 @@
 		8DD103571BA66E0900CE483B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD103551BA66E0900CE483B /* LaunchScreen.storyboard */; };
 		8DD103621BA66E0900CE483B /* PartTwoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103611BA66E0900CE483B /* PartTwoTests.m */; };
 		8DD1036D1BA66E0900CE483B /* PartTwoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1036C1BA66E0900CE483B /* PartTwoUITests.m */; };
+		9AD49E371BA90F4800426529 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD49E361BA90F4800426529 /* CustomView.xib */; settings = {ASSET_TAGS = (); }; };
+		9AD49E451BA91C9400426529 /* SocialMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD49E441BA91C9400426529 /* SocialMediaView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		8DD103681BA66E0900CE483B /* PartTwoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartTwoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD1036C1BA66E0900CE483B /* PartTwoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PartTwoUITests.m; sourceTree = "<group>"; };
 		8DD1036E1BA66E0900CE483B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AD49E361BA90F4800426529 /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomView.xib; path = ../CustomView.xib; sourceTree = "<group>"; };
+		9AD49E431BA91C9400426529 /* SocialMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialMediaView.h; path = ../SocialMediaView.h; sourceTree = "<group>"; };
+		9AD49E441BA91C9400426529 /* SocialMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialMediaView.m; path = ../SocialMediaView.m; sourceTree = "<group>"; };
+		9AEED1271BA9F797006638A4 /* SocialMediaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +109,12 @@
 			children = (
 				8DD1034A1BA66E0900CE483B /* AppDelegate.h */,
 				8DD1034B1BA66E0900CE483B /* AppDelegate.m */,
+				9AEED1271BA9F797006638A4 /* SocialMediaDelegate.h */,
 				8DD1034D1BA66E0900CE483B /* ViewController.h */,
 				8DD1034E1BA66E0900CE483B /* ViewController.m */,
+				9AD49E431BA91C9400426529 /* SocialMediaView.h */,
+				9AD49E441BA91C9400426529 /* SocialMediaView.m */,
+				9AD49E361BA90F4800426529 /* CustomView.xib */,
 				8DD103501BA66E0900CE483B /* Main.storyboard */,
 				8DD103531BA66E0900CE483B /* Assets.xcassets */,
 				8DD103551BA66E0900CE483B /* LaunchScreen.storyboard */,
@@ -244,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD103571BA66E0900CE483B /* LaunchScreen.storyboard in Resources */,
+				9AD49E371BA90F4800426529 /* CustomView.xib in Resources */,
 				8DD103541BA66E0900CE483B /* Assets.xcassets in Resources */,
 				8DD103521BA66E0900CE483B /* Main.storyboard in Resources */,
 			);
@@ -272,6 +283,7 @@
 			files = (
 				8DD1034F1BA66E0900CE483B /* ViewController.m in Sources */,
 				8DD1034C1BA66E0900CE483B /* AppDelegate.m in Sources */,
+				9AD49E451BA91C9400426529 /* SocialMediaView.m in Sources */,
 				8DD103491BA66E0900CE483B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +510,7 @@
 				8DD103731BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DD103741BA66E0900CE483B /* Build configuration list for PBXNativeTarget "PartTwoTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +519,7 @@
 				8DD103761BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DD103771BA66E0900CE483B /* Build configuration list for PBXNativeTarget "PartTwoUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +528,7 @@
 				8DD103791BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
