@@ -7,12 +7,25 @@
 //
 
 #import "ViewController.h"
+#import "CustomView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIView *CustomViewContainer;
 
 @end
 
 @implementation ViewController
+
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    
+    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomView" owner:self options:nil];
+    
+    CustomView *customView = [views firstObject];
+    
+    [self.CustomViewContainer addSubview:customView];
+    customView.frame = self.CustomViewContainer.bounds;
+}
 
 
 @end

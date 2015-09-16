@@ -7,12 +7,38 @@
 //
 
 #import "ViewController.h"
+#import "SocialMediaDelegate.h"
+#import "SocialMediaView.h"
 
-@interface ViewController ()
+@interface ViewController () <SocialMediaDelegate>
 
 @end
 
 @implementation ViewController
+
+//- (void)colorPicked: (CIColor *)colorDisplayed {
+//    self.view.backgroundColor = [UIColor colorWithCIColor:colorDisplayed];
+//}
+
+- (void)socialMediaViewDidTapLikeButton:(CIColor *)likeColor {
+      self.view.backgroundColor = [UIColor colorWithCIColor:likeColor];
+ 
+}
+
+- (void)socialMediaViewDidTapCommentButton:(CIColor *)commentColor {
+    self.view.backgroundColor = [UIColor colorWithCIColor:commentColor];
+    
+}
+
+- (void)socialMediaViewDidTapShareButton:(CIColor *)shareColor {
+    self.view.backgroundColor = [UIColor colorWithCIColor:shareColor];
+
+}
+
+
+- (void)addColor: (NSString *)colorAdded {
+    NSLog(@"%@", colorAdded);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

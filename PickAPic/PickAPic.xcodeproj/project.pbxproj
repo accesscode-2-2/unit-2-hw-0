@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FDE6C761BA8F6E20050A0E8 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FDE6C751BA8F6E20050A0E8 /* CustomView.xib */; };
+		5FDE6C791BA8F83F0050A0E8 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDE6C781BA8F83F0050A0E8 /* CustomView.m */; };
 		8D1F73C11BA66AE50040D369 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C01BA66AE50040D369 /* main.m */; };
 		8D1F73C41BA66AE50040D369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C31BA66AE50040D369 /* AppDelegate.m */; };
 		8D1F73C71BA66AE50040D369 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C61BA66AE50040D369 /* ViewController.m */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5FDE6C751BA8F6E20050A0E8 /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		5FDE6C771BA8F83F0050A0E8 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		5FDE6C781BA8F83F0050A0E8 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		8D1F73BC1BA66AE50040D369 /* PickAPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickAPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1F73C01BA66AE50040D369 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1F73C21BA66AE50040D369 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +110,9 @@
 				8D1F73C31BA66AE50040D369 /* AppDelegate.m */,
 				8D1F73C51BA66AE50040D369 /* ViewController.h */,
 				8D1F73C61BA66AE50040D369 /* ViewController.m */,
+				5FDE6C751BA8F6E20050A0E8 /* CustomView.xib */,
+				5FDE6C771BA8F83F0050A0E8 /* CustomView.h */,
+				5FDE6C781BA8F83F0050A0E8 /* CustomView.m */,
 				8D1F73C81BA66AE50040D369 /* Main.storyboard */,
 				8D1F73CB1BA66AE50040D369 /* Assets.xcassets */,
 				8D1F73CD1BA66AE50040D369 /* LaunchScreen.storyboard */,
@@ -244,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1F73CF1BA66AE50040D369 /* LaunchScreen.storyboard in Resources */,
+				5FDE6C761BA8F6E20050A0E8 /* CustomView.xib in Resources */,
 				8D1F73CC1BA66AE50040D369 /* Assets.xcassets in Resources */,
 				8D1F73CA1BA66AE50040D369 /* Main.storyboard in Resources */,
 			);
@@ -271,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1F73C71BA66AE50040D369 /* ViewController.m in Sources */,
+				5FDE6C791BA8F83F0050A0E8 /* CustomView.m in Sources */,
 				8D1F73C41BA66AE50040D369 /* AppDelegate.m in Sources */,
 				8D1F73C11BA66AE50040D369 /* main.m in Sources */,
 			);
