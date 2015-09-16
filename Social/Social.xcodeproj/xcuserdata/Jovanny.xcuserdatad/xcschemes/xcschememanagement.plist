@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>PartTwo.xcscheme</key>
+		<key>Social.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8DD103431BA66E0900CE483B</key>
+		<key>5078E0E21BA79701007BD843</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8DD1035C1BA66E0900CE483B</key>
+		<key>5078E0F61BA79701007BD843</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8DD103671BA66E0900CE483B</key>
+		<key>5078E1011BA79701007BD843</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Social" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jks-1n-IAg" customClass="SocialMediaView" customModule="Social" customModuleProvider="target">
+                                <rect key="frame" x="180" y="190" width="240" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THS-oV-oqo">
+                                        <rect key="frame" x="105" y="95" width="30" height="30"/>
+                                        <state key="normal" title="Like"/>
+                                        <connections>
+                                            <action selector="likeButtonTapped" destination="jks-1n-IAg" eventType="touchUpInside" id="LIE-Vv-QPV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XS-BL-bYO">
+                                        <rect key="frame" x="100" y="170" width="40" height="30"/>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="shareButtonTapped" destination="jks-1n-IAg" eventType="touchUpInside" id="Rag-ni-DzV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ap-5R-Qyu">
+                                        <rect key="frame" x="87" y="20" width="67" height="30"/>
+                                        <state key="normal" title="Comment"/>
+                                        <connections>
+                                            <action selector="commentButtonTapped" destination="jks-1n-IAg" eventType="touchUpInside" id="VTj-5w-Eex"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7XS-BL-bYO" secondAttribute="bottom" constant="20" id="FF8-ao-xxK"/>
+                                    <constraint firstItem="THS-oV-oqo" firstAttribute="centerY" secondItem="jks-1n-IAg" secondAttribute="centerY" id="Jl3-v2-YFK"/>
+                                    <constraint firstAttribute="width" constant="240" id="YK4-Wb-ZVl"/>
+                                    <constraint firstItem="8ap-5R-Qyu" firstAttribute="centerX" secondItem="jks-1n-IAg" secondAttribute="centerX" id="ccB-jv-MFt"/>
+                                    <constraint firstItem="8ap-5R-Qyu" firstAttribute="top" secondItem="jks-1n-IAg" secondAttribute="top" constant="20" id="csY-Cy-xmd"/>
+                                    <constraint firstItem="THS-oV-oqo" firstAttribute="centerX" secondItem="jks-1n-IAg" secondAttribute="centerX" id="dIE-AM-SCc"/>
+                                    <constraint firstAttribute="height" constant="220" id="iMd-Ez-aLa"/>
+                                    <constraint firstItem="7XS-BL-bYO" firstAttribute="centerX" secondItem="jks-1n-IAg" secondAttribute="centerX" id="s9m-zn-AI0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jks-1n-IAg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ceZ-zB-37v"/>
+                            <constraint firstItem="jks-1n-IAg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y7z-rm-huu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="socialMediaView" destination="jks-1n-IAg" id="KpO-v4-dgm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382" y="362"/>
+        </scene>
+    </scenes>
+</document>
