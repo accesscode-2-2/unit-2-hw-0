@@ -1,27 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kNn-QZ-03M">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="c7l-T3-Rqk">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <navigationController id="kNn-QZ-03M" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oez-MT-Crg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Pq-HW-9xR" kind="relationship" relationship="rootViewController" id="VjO-NV-PPs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ted-3h-JcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="339"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fET-mn-SuN">
+            <objects>
+                <viewController id="3Pq-HW-9xR" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="w4Y-7E-MkZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="lqa-zr-dd6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="OEA-8S-ITF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="POb-XH-sal">
+                                <rect key="frame" x="180" y="148" width="240" height="304"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="aNJ-u0-tmW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1B-pV-rup">
+                                <rect key="frame" x="259" y="572" width="83" height="30"/>
+                                <state key="normal" title="Camera Roll"/>
+                                <connections>
+                                    <action selector="cameraRollTapped:" destination="3Pq-HW-9xR" eventType="touchUpInside" id="6Ch-HE-d1e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="POb-XH-sal" firstAttribute="top" secondItem="w4Y-7E-MkZ" secondAttribute="bottom" constant="84" id="CPQ-Fb-roc"/>
+                            <constraint firstItem="POb-XH-sal" firstAttribute="centerX" secondItem="OEA-8S-ITF" secondAttribute="centerX" id="QEg-fY-DiZ"/>
+                            <constraint firstAttribute="bottom" secondItem="d1B-pV-rup" secondAttribute="bottom" constant="50" id="ZGw-gA-2p2"/>
+                            <constraint firstItem="d1B-pV-rup" firstAttribute="centerX" secondItem="OEA-8S-ITF" secondAttribute="centerX" id="iSt-Rw-oca"/>
+                            <constraint firstItem="POb-XH-sal" firstAttribute="centerY" secondItem="OEA-8S-ITF" secondAttribute="centerY" id="nbl-On-RsO"/>
+                            <constraint firstItem="d1B-pV-rup" firstAttribute="top" secondItem="POb-XH-sal" secondAttribute="bottom" constant="120" id="ncg-iP-nrN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZGw-gA-2p2"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="bJs-Co-zIN"/>
+                    <connections>
+                        <outlet property="hwViewController" destination="POb-XH-sal" id="BqN-P4-jwF"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fw1-aw-Qbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="322"/>
+            <point key="canvasLocation" x="859" y="339"/>
         </scene>
     </scenes>
 </document>

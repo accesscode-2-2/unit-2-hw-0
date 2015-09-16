@@ -15,4 +15,14 @@
 @implementation ViewController
 
 
+- (IBAction)cameraRollTapped:(UIButton *)sender {
+	UIImagePickerController *selector = [[UIImagePickerController alloc] init];
+	selector.delegate = self;
+	selector.allowsEditing = YES;
+	selector.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+	//[self.presentedViewController animationDidStart:YES completion:NULL];
+	[self presentViewController:selector animated:YES completion:NULL];
+	
+	 
+	}
 @end
