@@ -11,6 +11,7 @@
 
 @interface SocialMediaView : UIView
 
-@property (nonatomic, weak) id <ButtonPressedProtocol> delegate; 
+@property (nonatomic, weak) id <ButtonPressedProtocol> delegate;
+
 
 @end

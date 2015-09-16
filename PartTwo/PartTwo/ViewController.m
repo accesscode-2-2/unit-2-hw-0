@@ -12,9 +12,6 @@
 
 @interface ViewController () <ButtonPressedProtocol>
 
-//@property (nonatomic) id selectedColor;
-@property (strong, nonatomic) IBOutlet UIView *myView;
-
 @end
 
 @implementation ViewController
@@ -26,22 +23,21 @@
     
     // assign delegate
     customView.delegate = self;
- 
-    self.myView.backgroundColor = [UIColor blackColor];
-    
+
 }
 
 - (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view {
-
-    self.myView.backgroundColor = view;
+    self.view.backgroundColor = [UIColor blueColor];
     
 }
 
 - (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view {
-    self.myView.backgroundColor = view;
+     self.view.backgroundColor = [UIColor redColor];
 }
 
 - (void)socialMediaViewDidTapShareButton:(SocialMediaView *)view {
-  self.myView.backgroundColor = view; }
+     self.view.backgroundColor = [UIColor greenColor];
+    
+}
 
 @end
