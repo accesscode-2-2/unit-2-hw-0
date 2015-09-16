@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-//Remember to add the imageView outlet.
+//Remember to add the imageView outlet jerk.
 @property (weak, nonatomic) IBOutlet UIImageView *hwImageView;
 
 @end
@@ -35,8 +35,6 @@
 	}
 
 
-	- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
-		[picker dismissViewControllerAnimated:YES completion:NULL];	}
 	
 
 @end
