@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+//Remember to add the imageView outlet.
+@property (weak, nonatomic) IBOutlet UIImageView *hwImageView;
 
 @end
 
@@ -23,6 +25,18 @@
 	//[self.presentedViewController animationDidStart:YES completion:NULL];
 	[self presentViewController:selector animated:YES completion:NULL];
 	
-	 
+	
 	}
+
+	- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+		UIImage *cameraRollImage = info[UIImagePickerControllerEditedImage];
+		self.hwImageView.image = cameraRollImage;
+		[picker dismissViewControllerAnimated:YES completion:NULL];
+	}
+
+
+	- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+		[picker dismissViewControllerAnimated:YES completion:NULL];	}
+	
+
 @end

@@ -64,6 +64,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bJs-Co-zIN"/>
                     <connections>
+                        <outlet property="hwImageView" destination="POb-XH-sal" id="2NM-FE-Xtc"/>
                         <outlet property="hwViewController" destination="POb-XH-sal" id="BqN-P4-jwF"/>
                     </connections>
                 </viewController>
