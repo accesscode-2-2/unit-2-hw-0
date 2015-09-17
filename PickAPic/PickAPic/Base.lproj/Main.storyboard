@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kIS-Hg-rlu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -16,12 +16,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rrB-sc-EpF">
+                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ww-ce-FJ6">
+                                <rect key="frame" x="10" y="560" width="580" height="30"/>
+                                <state key="normal" title="Camera Roll"/>
+                                <connections>
+                                    <action selector="cameraRollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJ4-ik-adI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Ww-ce-FJ6" secondAttribute="bottom" constant="10" id="FFy-ja-Daz"/>
+                            <constraint firstAttribute="trailing" secondItem="rrB-sc-EpF" secondAttribute="trailing" id="OTo-QZ-06Y"/>
+                            <constraint firstItem="rrB-sc-EpF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PJd-sG-XaS"/>
+                            <constraint firstItem="0Ww-ce-FJ6" firstAttribute="top" secondItem="rrB-sc-EpF" secondAttribute="bottom" constant="10" id="Xc2-UU-8KJ"/>
+                            <constraint firstItem="rrB-sc-EpF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pEM-bh-06Q"/>
+                            <constraint firstAttribute="trailing" secondItem="0Ww-ce-FJ6" secondAttribute="trailing" constant="10" id="rL5-Fn-d1W"/>
+                            <constraint firstItem="0Ww-ce-FJ6" firstAttribute="top" secondItem="rrB-sc-EpF" secondAttribute="bottom" constant="10" id="vRi-44-lgg"/>
+                            <constraint firstItem="0Ww-ce-FJ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="wpH-rT-SmQ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Qnx-M4-w7k"/>
+                    <connections>
+                        <outlet property="cameraRoll" destination="0Ww-ce-FJ6" id="kYx-VG-sLU"/>
+                        <outlet property="imageView" destination="rrB-sc-EpF" id="Kz9-cO-Efs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="375" y="322"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z2d-xa-pQY">
+            <objects>
+                <navigationController id="kIS-Hg-rlu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jnN-Wo-qt0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wbr-cN-Jed"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bp3-0F-Dih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-321" y="322"/>
         </scene>
     </scenes>
 </document>
