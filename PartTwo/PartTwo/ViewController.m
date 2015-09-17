@@ -27,8 +27,6 @@
     //customize view borders
     self.socialMediaView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.socialMediaView.layer.borderWidth = 3.0f;
-
-    self.socialMediaView.delegate = self; //assign the delegate
     
     //buttons colors
     self.commentButtonProperty.backgroundColor = [UIColor colorWithRed:0.36 green:0.64 blue:0.24 alpha:1.0];
@@ -37,8 +35,10 @@
     
     //set view color green, by default
     self.view.backgroundColor = [UIColor colorWithRed:0.36 green:0.64 blue:0.24 alpha:1.0];
-
-}
+    
+    //assign the delegate
+    self.socialMediaView.delegate = self;
+    }
 
 - (void)commentButtonTapped:(SocialMediaView *)view{
     self.view.backgroundColor = [UIColor colorWithRed:0.36 green:0.64 blue:0.24 alpha:1.0];
