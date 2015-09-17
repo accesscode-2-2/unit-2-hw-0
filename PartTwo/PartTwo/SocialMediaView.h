@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "ButtonPressedProtocol.h"
 
+extern NSString * const MyCustomNotificationName; // public constant declaration for notification name
+
 @interface SocialMediaView : UIView
 
 @property (nonatomic, weak) id <ButtonPressedProtocol> delegate;
-
 
 @end

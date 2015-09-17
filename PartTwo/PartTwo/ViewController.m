@@ -12,23 +12,23 @@
 
 @interface ViewController () <ButtonPressedProtocol>
 
+@property (strong, nonatomic) IBOutlet SocialMediaView *socialMediaView; // create property for delegate reference (this is the custom view)
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    self.socialMediaView.delegate = self;  // assign delegate to the custom view property
     
-   SocialMediaView *customView = [[SocialMediaView alloc] init];
-    
-    // assign delegate
-    customView.delegate = self;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(socialMediaViewDidTapShareButton:) name:MyCustomNotificationName object:nil]; // add observer for didTapShareButton notification
 
 }
 
 - (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view {
     self.view.backgroundColor = [UIColor blueColor];
-    
 }
 
 - (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view {

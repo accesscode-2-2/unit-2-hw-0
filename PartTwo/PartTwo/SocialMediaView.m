@@ -8,12 +8,13 @@
 
 #import "SocialMediaView.h"
 
+NSString * const MyCustomNotificationName = @"MyCustomNotification"; // declare constant for notification and set string
+
 @interface SocialMediaView ()
 
 @end
 
 @implementation SocialMediaView
-
 
 - (IBAction)commentButtonTapped:(UIButton *)sender {
     [self.delegate socialMediaViewDidTapCommentButton:self];
@@ -24,7 +25,9 @@
 }
 
 - (IBAction)shareButtonTapped:(UIButton *)sender {
-    [self.delegate socialMediaViewDidTapShareButton:self];
+   // [self.delegate socialMediaViewDidTapShareButton:self];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:MyCustomNotificationName object:nil]; // broadcasting notification
 }
 
 @end
