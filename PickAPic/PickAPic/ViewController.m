@@ -20,21 +20,22 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.cameraRoll.hidden = YES;
+    self.imagePickerController = [[UIImagePickerController alloc] init];
     [self goUIImagePickerController];
 }
 
 - (void)goUIImagePickerController{
-    self.imagePickerController = [UIImagePickerController new];
     
     self.imagePickerController.delegate = self;
     
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]){
-        
-        self.imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        
-        self.imagePickerController.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-    }
+    self.imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    NSLog (@"first ");
+    
+    self.imagePickerController.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    NSLog (@"sec ");
+  
     [self.navigationController presentViewController:self.imagePickerController animated:YES completion:nil];
+    NSLog (@"third ");
 }
 
 #pragma mark - UIImagePickerControllerDelegate
@@ -54,12 +55,10 @@
 
 #pragma mark - Camera Roll Button Tapped
 
-
 - (IBAction)cameraRollButtonTapped:(UIButton *)sender {
     [self goUIImagePickerController];
 
 }
-
 
 
 @end
