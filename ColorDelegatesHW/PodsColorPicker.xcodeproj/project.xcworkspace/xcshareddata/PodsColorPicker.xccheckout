@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E7E91A9A-8BC9-4E76-BCC5-C68DF8D50950</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PodsColorPicker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F466377187FDD2D17CD485960E9246900DE34DAA</key>
+		<string>github.com:blueKrisNYC/CocoaPodsColorPicker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PodsColorPicker.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F466377187FDD2D17CD485960E9246900DE34DAA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:blueKrisNYC/CocoaPodsColorPicker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F466377187FDD2D17CD485960E9246900DE34DAA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F466377187FDD2D17CD485960E9246900DE34DAA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CocoaPodsColorPicker</string>
+		</dict>
+	</array>
+</dict>
+</plist>

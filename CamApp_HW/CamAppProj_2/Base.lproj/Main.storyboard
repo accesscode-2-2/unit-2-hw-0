@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="19S-zo-i8P">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Basic Cam AppVC-->
+        <scene sceneID="eOR-BR-jHN">
+            <objects>
+                <viewController id="19S-zo-i8P" customClass="BasicCamAppVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="luN-18-XPy"/>
+                        <viewControllerLayoutGuide type="bottom" id="CyV-cs-v0X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VZf-ga-6Hd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bfw-uX-FKj">
+                                <rect key="frame" x="-5" y="0.0" width="414" height="367"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="uiX-zn-ysb">
+                                <rect key="frame" x="0.0" y="544" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Take Photo" id="eAd-pr-U3E">
+                                        <color key="tintColor" red="0.0" green="0.81246823192929296" blue="0.81246823192929296" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="19S-zo-i8P" id="him-03-MmA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="myImageView" destination="Bfw-uX-FKj" id="mYf-6d-er5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugj-Ov-dm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218" y="401"/>
+        </scene>
+    </scenes>
+</document>
