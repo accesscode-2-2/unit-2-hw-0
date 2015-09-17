@@ -13,6 +13,9 @@
 
 @interface ViewController () <SocialMediaViewProtocol>
 @property (weak, nonatomic) IBOutlet SocialMediaView *socialMediaView;
+@property (weak, nonatomic) IBOutlet UIButton *commentButtonProperty;
+@property (weak, nonatomic) IBOutlet UIButton *likeButtonProperty;
+@property (weak, nonatomic) IBOutlet UIButton *shareButtonProperty;
 
 @end
 
@@ -20,24 +23,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //customize view borders
     
+    //customize view borders
     self.socialMediaView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.socialMediaView.layer.borderWidth = 3.0f;
-//    self.socialMediaView.
-    
 
     self.socialMediaView.delegate = self; //assign the delegate
+    
+    //buttons colors
+    self.commentButtonProperty.backgroundColor = [UIColor colorWithRed:0.36 green:0.64 blue:0.24 alpha:1.0];
+    self.likeButtonProperty.backgroundColor = [UIColor colorWithRed:0.23 green:0.42 blue:0.71 alpha:1.0];
+    self.shareButtonProperty.backgroundColor = [UIColor colorWithRed:0.87 green:0.20 blue:0.20 alpha:1.0];
+    
+    //set view color green, by default
+    self.view.backgroundColor = [UIColor colorWithRed:0.36 green:0.64 blue:0.24 alpha:1.0];
+
 }
 
 - (void)commentButtonTapped:(SocialMediaView *)view{
-    self.view.backgroundColor = [UIColor greenColor];
+    self.view.backgroundColor = [UIColor colorWithRed:0.36 green:0.64 blue:0.24 alpha:1.0];
 }
 - (void)likeButtonTapped:(SocialMediaView *)view{
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor colorWithRed:0.23 green:0.42 blue:0.71 alpha:1.0];
 }
 - (void)shareButtonTapped:(SocialMediaView *)view{
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor colorWithRed:0.87 green:0.20 blue:0.20 alpha:1.0];
 }
 
 

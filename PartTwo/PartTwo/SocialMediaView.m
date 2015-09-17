@@ -10,6 +10,10 @@
 #import "ViewController.h"
 #import "SocialMediaViewProtocol.h"
 
+@interface SocialMediaView ()
+
+
+@end
 
 @implementation SocialMediaView
 

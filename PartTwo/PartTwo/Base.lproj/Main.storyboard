@@ -18,34 +18,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPP-9t-DPV" customClass="SocialMediaView">
-                                <rect key="frame" x="210" y="200" width="180" height="200"/>
+                                <rect key="frame" x="230" y="200" width="140" height="200"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN5-wI-g6j">
-                                        <rect key="frame" x="0.0" y="67" width="180" height="66"/>
-                                        <color key="backgroundColor" red="0.16616099757506178" green="0.21363111132141993" blue="0.79825599747474751" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN5-wI-g6j">
+                                        <rect key="frame" x="0.0" y="67" width="140" height="66"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Like"/>
+                                        <state key="normal" title=" " image="like"/>
                                         <connections>
                                             <action selector="likeTapped:" destination="cPP-9t-DPV" eventType="touchUpInside" id="GDG-Tq-BjB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5R-9r-NC5">
-                                        <rect key="frame" x="0.0" y="133" width="180" height="67"/>
-                                        <color key="backgroundColor" red="0.79825599747474751" green="0.085662501745496389" blue="0.058423267748093893" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5R-9r-NC5">
+                                        <rect key="frame" x="0.0" y="133" width="140" height="67"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Share"/>
+                                        <state key="normal" title=" " image="share"/>
                                         <connections>
                                             <action selector="shareTapped:" destination="cPP-9t-DPV" eventType="touchUpInside" id="cXh-9L-x8W"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGb-Dk-zKO">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="67"/>
-                                        <color key="backgroundColor" red="0.17815739525016711" green="0.79825599747474751" blue="0.063622990147227956" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGb-Dk-zKO">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="67"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Comment"/>
+                                        <state key="normal" title=" " image="comment"/>
                                         <connections>
                                             <action selector="commentTapped:" destination="cPP-9t-DPV" eventType="touchUpInside" id="r4u-Ni-PVb"/>
                                         </connections>
@@ -54,7 +48,7 @@
                                 <constraints>
                                     <constraint firstItem="sGb-Dk-zKO" firstAttribute="height" secondItem="fN5-wI-g6j" secondAttribute="height" id="2cV-M5-Wkp"/>
                                     <constraint firstItem="sGb-Dk-zKO" firstAttribute="leading" secondItem="cPP-9t-DPV" secondAttribute="leading" id="KWb-DY-tRv"/>
-                                    <constraint firstAttribute="width" constant="180" id="N13-5C-mhX"/>
+                                    <constraint firstAttribute="width" constant="140" id="N13-5C-mhX"/>
                                     <constraint firstItem="fN5-wI-g6j" firstAttribute="height" secondItem="i5R-9r-NC5" secondAttribute="height" id="WNg-J0-1q9"/>
                                     <constraint firstItem="i5R-9r-NC5" firstAttribute="leading" secondItem="cPP-9t-DPV" secondAttribute="leading" id="Zo0-wa-2Ng"/>
                                     <constraint firstAttribute="trailing" secondItem="fN5-wI-g6j" secondAttribute="trailing" id="exZ-t2-m87"/>
@@ -76,6 +70,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="commentButtonProperty" destination="sGb-Dk-zKO" id="Cwm-Xf-U3k"/>
+                        <outlet property="likeButtonProperty" destination="fN5-wI-g6j" id="s78-oa-FPU"/>
+                        <outlet property="shareButtonProperty" destination="i5R-9r-NC5" id="eL2-P7-kMc"/>
                         <outlet property="socialMediaView" destination="cPP-9t-DPV" id="PQL-ua-B9G"/>
                     </connections>
                 </viewController>
@@ -84,4 +81,9 @@
             <point key="canvasLocation" x="280" y="315"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="comment" width="480" height="480"/>
+        <image name="like" width="2000" height="1713"/>
+        <image name="share" width="128" height="128"/>
+    </resources>
 </document>
