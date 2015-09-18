@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cne-ui-6cC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="drm-5c-6z3">
+            <objects>
+                <navigationController id="Cne-ui-6cC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fl7-We-ul0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QU3-nt-rdb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UeM-hK-Tt8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-902" y="184"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +32,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oez-5E-r2O" customClass="SocialMediaView">
+                                <rect key="frame" x="178" y="158" width="244" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lD-y5-lGa">
+                                        <rect key="frame" x="99" y="221" width="46" height="30"/>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="share:" destination="Oez-5E-r2O" eventType="touchUpInside" id="IhQ-DX-Z6N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THg-FA-v7P">
+                                        <rect key="frame" x="89" y="33" width="69" height="30"/>
+                                        <state key="normal" title="Comment"/>
+                                        <connections>
+                                            <action selector="comment:" destination="Oez-5E-r2O" eventType="touchUpInside" id="Vub-bA-nzc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85924393880000005" green="0.8895822149" blue="0.94631865530000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="8lD-y5-lGa" firstAttribute="centerX" secondItem="Oez-5E-r2O" secondAttribute="centerX" id="5HA-DR-Jhb"/>
+                                    <constraint firstItem="THg-FA-v7P" firstAttribute="centerX" secondItem="Oez-5E-r2O" secondAttribute="centerX" id="BP4-Cg-FrU"/>
+                                    <constraint firstAttribute="bottom" secondItem="8lD-y5-lGa" secondAttribute="bottom" constant="33" id="G5a-YL-I5g"/>
+                                    <constraint firstItem="THg-FA-v7P" firstAttribute="leading" secondItem="Oez-5E-r2O" secondAttribute="leading" constant="85" id="LMK-0U-pqA"/>
+                                    <constraint firstItem="THg-FA-v7P" firstAttribute="top" secondItem="Oez-5E-r2O" secondAttribute="top" constant="33" id="OFo-jU-61B"/>
+                                    <constraint firstAttribute="width" constant="244" id="hu4-7J-5is"/>
+                                    <constraint firstAttribute="height" constant="284" id="n9W-3Y-iK8"/>
+                                    <constraint firstItem="8lD-y5-lGa" firstAttribute="leading" secondItem="Oez-5E-r2O" secondAttribute="leading" constant="99" id="obO-ii-ijm"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyu-MV-Umi">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <state key="normal" title="Like"/>
+                                <connections>
+                                    <action selector="like:" destination="Oez-5E-r2O" eventType="touchUpInside" id="zaH-E7-Nby"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Oez-5E-r2O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fdc-ou-mEQ"/>
+                            <constraint firstItem="Oez-5E-r2O" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MWo-gp-Z9C"/>
+                            <constraint firstItem="Iyu-MV-Umi" firstAttribute="centerY" secondItem="Oez-5E-r2O" secondAttribute="centerY" id="MrO-uQ-CC9"/>
+                            <constraint firstItem="Iyu-MV-Umi" firstAttribute="centerX" secondItem="Oez-5E-r2O" secondAttribute="centerX" id="wTC-zw-YiI"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lrK-zi-lM5"/>
+                    <connections>
+                        <outlet property="socialMediaView" destination="Oez-5E-r2O" id="g7I-fN-54z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-245" y="184"/>
         </scene>
     </scenes>
 </document>
