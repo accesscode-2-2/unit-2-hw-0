@@ -1,18 +1,18 @@
 //
-//  PickAPicTests.m
-//  PickAPicTests
+//  SocialTests.m
+//  SocialTests
 //
-//  Created by Varindra Hart on 9/17/15.
+//  Created by Varindra Hart on 9/18/15.
 //  Copyright © 2015 Varindra Hart. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface PickAPicTests : XCTestCase
+@interface SocialTests : XCTestCase
 
 @end
 
-@implementation PickAPicTests
+@implementation SocialTests
 
 - (void)setUp {
     [super setUp];

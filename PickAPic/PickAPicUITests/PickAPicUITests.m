@@ -2,8 +2,8 @@
 //  PickAPicUITests.m
 //  PickAPicUITests
 //
-//  Created by Michael Kavouras on 9/13/15.
-//  Copyright © 2015 Mike Kavouras. All rights reserved.
+//  Created by Varindra Hart on 9/17/15.
+//  Copyright © 2015 Varindra Hart. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
@@ -23,8 +23,6 @@
     self.continueAfterFailure = NO;
     // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
     [[[XCUIApplication alloc] init] launch];
-    
-    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
 }
 
 - (void)tearDown {
