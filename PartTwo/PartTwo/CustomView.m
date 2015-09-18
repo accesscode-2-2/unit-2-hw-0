@@ -11,15 +11,15 @@
 @implementation CustomView
 
 - (IBAction)likeButton:(UIButton *)sender {
-    NSLog(@"Like (y)");
+    [self.delegate socialMediaViewDidTapLikeButton:self];
 }
 
 - (IBAction)commentButton:(UIButton *)sender {
-    NSLog(@"Comment");
+    [self.delegate socialMediaViewDidTapCommentButton:self];
 }
 
 - (IBAction)shareButton:(UIButton *)sender {
-    NSLog(@"Share");
+    [self.delegate socialMediaViewDidTapShareButton:self];
 }
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewDelegate.h"
 
 @interface CustomView : UIView
+@property (nonatomic, weak) id <CustomViewDelegate> delegate;
 
 @end

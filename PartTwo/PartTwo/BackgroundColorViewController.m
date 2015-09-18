@@ -8,9 +8,11 @@
 
 #import "BackgroundColorViewController.h"
 #import "CustomView.h"
+#import "CustomViewDelegate.h"
 
-@interface BackgroundColorViewController ()
+@interface BackgroundColorViewController () <CustomViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *customViewContainer;
+@property (nonatomic) CustomView *customView;
 
 @end
 
@@ -20,11 +22,23 @@
     [super viewDidLoad];
 
     NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomView" owner:self options:nil];
-    CustomView *customView = [views firstObject];
+    self.customView = [views firstObject];
     
-    [self.customViewContainer addSubview:customView];
-    customView.frame = self.customViewContainer.bounds;
+    [self.customViewContainer addSubview:self.customView];
+    self.customView.frame = self.customViewContainer.bounds;
     
+    self.customView.delegate = self;
+    
+}
+
+- (void)socialMediaViewDidTapLikeButton:(CustomView *)view {
+    self.view.backgroundColor = [UIColor blueColor];
+}
+- (void)socialMediaViewDidTapCommentButton:(CustomView *)view {
+    self.view.backgroundColor = [UIColor greenColor];
+}
+- (void)socialMediaViewDidTapShareButton:(CustomView *)view{
+    self.view.backgroundColor = [UIColor redColor];
 }
 
 @end

@@ -10,12 +10,12 @@
 
 // must set @class instead of property or error
 
-@class CustomView
+@class CustomView;
 
 @protocol CustomViewDelegate <NSObject>
 
-- (void)customViewLikeButtonTapped:(CustomView *) view;
-
-
+- (void)socialMediaViewDidTapLikeButton:(CustomView *)view;
+- (void)socialMediaViewDidTapCommentButton:(CustomView *)view;
+- (void)socialMediaViewDidTapShareButton:(CustomView *)view;
 
 @end
