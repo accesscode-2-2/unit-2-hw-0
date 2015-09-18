@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690DE2AD1BABD7BD003B045F /* ImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690DE2AC1BABD7BD003B045F /* ImagePickerController.m */; settings = {ASSET_TAGS = (); }; };
+		6947DFD71BABD1A400421CAF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6947DFD61BABD1A400421CAF /* MobileCoreServices.framework */; };
 		8D1F73C11BA66AE50040D369 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C01BA66AE50040D369 /* main.m */; };
 		8D1F73C41BA66AE50040D369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C31BA66AE50040D369 /* AppDelegate.m */; };
 		8D1F73C71BA66AE50040D369 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C61BA66AE50040D369 /* ViewController.m */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		690DE2AB1BABD7BD003B045F /* ImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerController.h; sourceTree = "<group>"; };
+		690DE2AC1BABD7BD003B045F /* ImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerController.m; sourceTree = "<group>"; };
+		6947DFD61BABD1A400421CAF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8D1F73BC1BA66AE50040D369 /* PickAPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickAPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1F73C01BA66AE50040D369 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1F73C21BA66AE50040D369 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6947DFD71BABD1A400421CAF /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 		8D1F73B31BA66AE50040D369 = {
 			isa = PBXGroup;
 			children = (
+				6947DFD61BABD1A400421CAF /* MobileCoreServices.framework */,
 				8D1F73BE1BA66AE50040D369 /* PickAPic */,
 				8D1F73D81BA66AE50040D369 /* PickAPicTests */,
 				8D1F73E31BA66AE50040D369 /* PickAPicUITests */,
@@ -105,6 +112,8 @@
 				8D1F73C31BA66AE50040D369 /* AppDelegate.m */,
 				8D1F73C51BA66AE50040D369 /* ViewController.h */,
 				8D1F73C61BA66AE50040D369 /* ViewController.m */,
+				690DE2AB1BABD7BD003B045F /* ImagePickerController.h */,
+				690DE2AC1BABD7BD003B045F /* ImagePickerController.m */,
 				8D1F73C81BA66AE50040D369 /* Main.storyboard */,
 				8D1F73CB1BA66AE50040D369 /* Assets.xcassets */,
 				8D1F73CD1BA66AE50040D369 /* LaunchScreen.storyboard */,
@@ -273,6 +282,7 @@
 				8D1F73C71BA66AE50040D369 /* ViewController.m in Sources */,
 				8D1F73C41BA66AE50040D369 /* AppDelegate.m in Sources */,
 				8D1F73C11BA66AE50040D369 /* main.m in Sources */,
+				690DE2AD1BABD7BD003B045F /* ImagePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

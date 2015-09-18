@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,109 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MH-Si-z51" customClass="SocialMediaView">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AK-gC-MTw">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9C-1Y-MV9">
+                                                <rect key="frame" x="108" y="23" width="84" height="53"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="32"/>
+                                                <state key="normal" title="LIKE">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="likeButtonPressed" destination="5MH-Si-z51" eventType="touchUpInside" id="y5M-Qt-Wzu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="y9C-1Y-MV9" firstAttribute="centerY" secondItem="6AK-gC-MTw" secondAttribute="centerY" id="dYY-8G-rh9"/>
+                                            <constraint firstItem="y9C-1Y-MV9" firstAttribute="centerX" secondItem="6AK-gC-MTw" secondAttribute="centerX" id="yNA-1P-HlN"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62e-GG-phJ">
+                                        <rect key="frame" x="0.0" y="200" width="300" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csk-DU-VTf">
+                                                <rect key="frame" x="95.5" y="23.5" width="110" height="53"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="32"/>
+                                                <state key="normal" title="SHARE">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="shareButtonPressed" destination="5MH-Si-z51" eventType="touchUpInside" id="jEn-mc-Qmn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Csk-DU-VTf" firstAttribute="centerX" secondItem="62e-GG-phJ" secondAttribute="centerX" id="KM1-oJ-97E"/>
+                                            <constraint firstItem="Csk-DU-VTf" firstAttribute="centerY" secondItem="62e-GG-phJ" secondAttribute="centerY" id="r70-EC-FfH"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7o-6D-ia6">
+                                        <rect key="frame" x="0.0" y="100" width="300" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKP-I1-ff6">
+                                                <rect key="frame" x="63" y="23" width="174" height="53"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="32"/>
+                                                <state key="normal" title="COMMENT">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="commentButtonPressed" destination="5MH-Si-z51" eventType="touchUpInside" id="YJq-hU-eNT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="NKP-I1-ff6" firstAttribute="centerX" secondItem="H7o-6D-ia6" secondAttribute="centerX" id="JE2-QY-7sA"/>
+                                            <constraint firstItem="NKP-I1-ff6" firstAttribute="centerY" secondItem="H7o-6D-ia6" secondAttribute="centerY" id="bde-gE-68M"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7663470643939394" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="6AK-gC-MTw" firstAttribute="height" secondItem="H7o-6D-ia6" secondAttribute="height" id="0ut-H5-r94"/>
+                                    <constraint firstAttribute="width" constant="300" id="2xY-Xe-XvB"/>
+                                    <constraint firstItem="H7o-6D-ia6" firstAttribute="leading" secondItem="5MH-Si-z51" secondAttribute="leading" id="7eB-CW-JPz"/>
+                                    <constraint firstAttribute="trailing" secondItem="62e-GG-phJ" secondAttribute="trailing" id="GJ3-pu-HYL"/>
+                                    <constraint firstItem="62e-GG-phJ" firstAttribute="top" secondItem="H7o-6D-ia6" secondAttribute="bottom" id="I50-9O-2Bh"/>
+                                    <constraint firstItem="6AK-gC-MTw" firstAttribute="top" secondItem="5MH-Si-z51" secondAttribute="top" id="JLQ-6U-nBV"/>
+                                    <constraint firstItem="H7o-6D-ia6" firstAttribute="top" secondItem="6AK-gC-MTw" secondAttribute="bottom" id="Kd6-gR-TSr"/>
+                                    <constraint firstAttribute="trailing" secondItem="6AK-gC-MTw" secondAttribute="trailing" id="VcG-6x-ZVD"/>
+                                    <constraint firstAttribute="height" constant="300" id="Vkx-Ir-SKR"/>
+                                    <constraint firstAttribute="bottom" secondItem="62e-GG-phJ" secondAttribute="bottom" id="bBs-Kz-vDj"/>
+                                    <constraint firstAttribute="trailing" secondItem="H7o-6D-ia6" secondAttribute="trailing" id="f4T-Qh-DQ3"/>
+                                    <constraint firstItem="62e-GG-phJ" firstAttribute="leading" secondItem="5MH-Si-z51" secondAttribute="leading" id="hqD-zW-BD3"/>
+                                    <constraint firstItem="6AK-gC-MTw" firstAttribute="leading" secondItem="5MH-Si-z51" secondAttribute="leading" id="jSn-mX-mSc"/>
+                                    <constraint firstItem="6AK-gC-MTw" firstAttribute="height" secondItem="5MH-Si-z51" secondAttribute="height" multiplier="1/3" id="q8d-Nm-XdB"/>
+                                    <constraint firstItem="6AK-gC-MTw" firstAttribute="height" secondItem="62e-GG-phJ" secondAttribute="height" id="yuX-Vo-Ner"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="I50-9O-2Bh"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5MH-Si-z51" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dhW-L2-4pe"/>
+                            <constraint firstItem="5MH-Si-z51" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fBh-Lx-lWq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="socialMediaView" destination="5MH-Si-z51" id="rmX-8d-R6u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="317"/>
         </scene>
     </scenes>
 </document>
