@@ -60,6 +60,34 @@
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
+- (void)viewDidLoad {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reachabilityChanged" object:self];
+    
+    BOOL isReachable = YES;
+    NSDictionary *dataDict = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:isReachable]
+                                                         forKey:@"isReachable"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reachabilityChanged" object:self userInfo:dataDict];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleReachabilityChange:)
+                                                 name:@"reachabilityChanged"
+                                               object:nil];
+}
+
+- (void)handleReachabilityChange:(NSNotification *)note {
+    NSDictionary *theData = [note userInfo];
+    if (theData != nil) {
+        NSNumber *n = [theData objectForKey:@"isReachable"];
+        BOOL isReachable = [n boolValue];
+        NSLog(@"reachable: %d", isReachable);
+    }
+}
+
+-(void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 @end
 
