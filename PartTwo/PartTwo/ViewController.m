@@ -37,11 +37,11 @@
 }
 
 - (void)didTapCommentButton: (socialView *)view{
-     self.background.backgroundColor = [UIColor redColor];
+     self.background.backgroundColor = [UIColor greenColor];
 }
 
 - (void)didTapShareButton:(socialView *)view{
-     self.background.backgroundColor = [UIColor greenColor];
+     self.background.backgroundColor = [UIColor redColor];
 }
 
 @end
