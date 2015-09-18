@@ -1,8 +1,8 @@
 //
 //  main.m
-//  PickAPic
+//  Social
 //
-//  Created by Varindra Hart on 9/17/15.
+//  Created by Varindra Hart on 9/18/15.
 //  Copyright © 2015 Varindra Hart. All rights reserved.
 //
 
