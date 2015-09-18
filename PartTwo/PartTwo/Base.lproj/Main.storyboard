@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yge-2J-CWN" customClass="socialView">
+                                <rect key="frame" x="120" y="180" width="360" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJ5-KQ-wcB">
+                                        <rect key="frame" x="160" y="200" width="40" height="30"/>
+                                        <state key="normal" title="Share">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareButtonTapped:" destination="yge-2J-CWN" eventType="touchUpInside" id="yE3-xH-FLG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="uJ5-KQ-wcB" secondAttribute="centerX" id="u5F-jR-sCq"/>
+                                    <constraint firstAttribute="bottom" secondItem="uJ5-KQ-wcB" secondAttribute="bottom" constant="10" id="vvY-ur-RbN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7x-XU-6cn">
+                                <rect key="frame" x="266" y="285" width="68" height="30"/>
+                                <state key="normal" title="Comment">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="commentButtonTapped:" destination="yge-2J-CWN" eventType="touchUpInside" id="KGO-fl-BEf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byf-Sx-JhN">
+                                <rect key="frame" x="285" y="207" width="30" height="30"/>
+                                <state key="normal" title="Like">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="yge-2J-CWN" eventType="touchUpInside" id="M1R-Z3-Ac0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="O7x-XU-6cn" secondAttribute="centerY" id="9Tl-hW-JDT"/>
+                            <constraint firstItem="byf-Sx-JhN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="Afa-kv-car"/>
+                            <constraint firstAttribute="centerY" secondItem="yge-2J-CWN" secondAttribute="centerY" id="GlO-1b-Efk"/>
+                            <constraint firstItem="yge-2J-CWN" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.4" id="HKL-UZ-ZRi"/>
+                            <constraint firstAttribute="centerX" secondItem="yge-2J-CWN" secondAttribute="centerX" id="JUz-6M-DRj"/>
+                            <constraint firstItem="yge-2J-CWN" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.6" id="SSS-xb-muH"/>
+                            <constraint firstItem="yge-2J-CWN" firstAttribute="top" secondItem="byf-Sx-JhN" secondAttribute="top" constant="-27" id="VT9-Iq-Xou"/>
+                            <constraint firstAttribute="centerX" secondItem="byf-Sx-JhN" secondAttribute="centerX" id="W6n-0E-Z48"/>
+                            <constraint firstAttribute="centerX" secondItem="byf-Sx-JhN" secondAttribute="centerX" id="Zcy-po-Tg2"/>
+                            <constraint firstAttribute="centerX" secondItem="O7x-XU-6cn" secondAttribute="centerX" id="rrW-7J-fBl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Afa-kv-car"/>
+                                <exclude reference="Zcy-po-Tg2"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="background" destination="kh9-bI-dsS" id="RKF-xD-hlp"/>
+                        <outlet property="socialMediaView" destination="yge-2J-CWN" id="hz1-sd-kzK"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>

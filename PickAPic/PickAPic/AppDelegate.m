@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  PickAPic
 //
-//  Created by Michael Kavouras on 9/13/15.
-//  Copyright © 2015 Mike Kavouras. All rights reserved.
+//  Created by Henna on 9/15/15.
+//  Copyright (c) 2015 Henna. All rights reserved.
 //
 
 #import "AppDelegate.h"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,37 +14,41 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8D1F73BB1BA66AE50040D369"
+               BlueprintIdentifier = "38FCE10A1BA8FC2E00E8F313"
                BuildableName = "PickAPic.app"
                BlueprintName = "PickAPic"
+               ReferencedContainer = "container:PickAPic.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "38FCE1231BA8FC2F00E8F313"
+               BuildableName = "PickAPicTests.xctest"
+               BlueprintName = "PickAPicTests"
                ReferencedContainer = "container:PickAPic.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8D1F73D41BA66AE50040D369"
+               BlueprintIdentifier = "38FCE1231BA8FC2F00E8F313"
                BuildableName = "PickAPicTests.xctest"
                BlueprintName = "PickAPicTests"
-               ReferencedContainer = "container:PickAPic.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8D1F73DF1BA66AE50040D369"
-               BuildableName = "PickAPicUITests.xctest"
-               BlueprintName = "PickAPicUITests"
                ReferencedContainer = "container:PickAPic.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -52,30 +56,27 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D1F73BB1BA66AE50040D369"
+            BlueprintIdentifier = "38FCE10A1BA8FC2E00E8F313"
             BuildableName = "PickAPic.app"
             BlueprintName = "PickAPic"
             ReferencedContainer = "container:PickAPic.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D1F73BB1BA66AE50040D369"
+            BlueprintIdentifier = "38FCE10A1BA8FC2E00E8F313"
             BuildableName = "PickAPic.app"
             BlueprintName = "PickAPic"
             ReferencedContainer = "container:PickAPic.xcodeproj">
@@ -85,16 +86,16 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D1F73BB1BA66AE50040D369"
+            BlueprintIdentifier = "38FCE10A1BA8FC2E00E8F313"
             BuildableName = "PickAPic.app"
             BlueprintName = "PickAPic"
             ReferencedContainer = "container:PickAPic.xcodeproj">
