@@ -14,4 +14,5 @@
 - (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view;
 - (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view;
 - (void)socialMediaViewDidTapShareButton:(SocialMediaView *)view;
+
 @end
