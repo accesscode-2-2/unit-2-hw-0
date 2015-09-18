@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxe-Vt-cQj" customClass="SocialMediaView">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QI7-SA-ZxB">
+                                        <rect key="frame" x="0.0" y="135" width="300" height="30"/>
+                                        <state key="normal" title="Like"/>
+                                        <connections>
+                                            <action selector="likeButtonTapped:" destination="nxe-Vt-cQj" eventType="touchUpInside" id="AEi-Kp-92e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aE-Na-yLT">
+                                        <rect key="frame" x="0.0" y="173" width="300" height="30"/>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="shareButtonTapped:" destination="nxe-Vt-cQj" eventType="touchUpInside" id="oFh-xY-Zh8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W35-Ia-0qp">
+                                        <rect key="frame" x="0.0" y="97" width="300" height="30"/>
+                                        <state key="normal" title="Comment"/>
+                                        <connections>
+                                            <action selector="commentButtonTapped:" destination="nxe-Vt-cQj" eventType="touchUpInside" id="Dw5-4W-Zas"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.64739188762626265" green="0.64739188762626265" blue="0.64739188762626265" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="W35-Ia-0qp" firstAttribute="leading" secondItem="nxe-Vt-cQj" secondAttribute="leading" id="9uv-hM-qWm"/>
+                                    <constraint firstAttribute="height" constant="300" id="AbA-oN-L5F"/>
+                                    <constraint firstItem="QI7-SA-ZxB" firstAttribute="centerY" secondItem="nxe-Vt-cQj" secondAttribute="centerY" id="BGC-XL-EfS"/>
+                                    <constraint firstItem="QI7-SA-ZxB" firstAttribute="leading" secondItem="nxe-Vt-cQj" secondAttribute="leading" id="HUy-DZ-y2G"/>
+                                    <constraint firstAttribute="trailing" secondItem="4aE-Na-yLT" secondAttribute="trailing" id="KZd-vW-DQU"/>
+                                    <constraint firstItem="4aE-Na-yLT" firstAttribute="leading" secondItem="nxe-Vt-cQj" secondAttribute="leading" id="NOa-HL-wDe"/>
+                                    <constraint firstItem="QI7-SA-ZxB" firstAttribute="top" secondItem="W35-Ia-0qp" secondAttribute="bottom" constant="8" id="RrP-lU-TlD"/>
+                                    <constraint firstItem="QI7-SA-ZxB" firstAttribute="centerX" secondItem="nxe-Vt-cQj" secondAttribute="centerX" id="cCI-y4-8Lf"/>
+                                    <constraint firstItem="4aE-Na-yLT" firstAttribute="top" secondItem="QI7-SA-ZxB" secondAttribute="bottom" constant="8" id="iRs-AB-DjP"/>
+                                    <constraint firstAttribute="trailing" secondItem="QI7-SA-ZxB" secondAttribute="trailing" id="tlx-VE-6kb"/>
+                                    <constraint firstAttribute="trailing" secondItem="W35-Ia-0qp" secondAttribute="trailing" id="uWE-VF-va7"/>
+                                    <constraint firstAttribute="width" constant="300" id="yY5-j0-W6c"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nxe-Vt-cQj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EVS-n4-FjP"/>
+                            <constraint firstItem="nxe-Vt-cQj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aYI-nv-RQ8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="socialMediaView" destination="nxe-Vt-cQj" id="VWb-jJ-jsB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
