@@ -22,9 +22,7 @@
     self.socialMediaView.delegate = self;
 }
 
-//- (void)colorPicked: (CIColor *)colorDisplayed {
-//    self.view.backgroundColor = [UIColor colorWithCIColor:colorDisplayed];
-//}
+
 
 - (void)socialMediaViewDidTapLikeButton:(CIColor *)likeColor {
       self.view.backgroundColor = [UIColor colorWithCIColor:likeColor];
@@ -39,11 +37,6 @@
 - (void)socialMediaViewDidTapShareButton:(CIColor *)shareColor {
     self.view.backgroundColor = [UIColor colorWithCIColor:shareColor];
 
-}
-
-
-- (void)addColor: (NSString *)colorAdded {
-    NSLog(@"%@", colorAdded);
 }
 
 
