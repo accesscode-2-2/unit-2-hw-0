@@ -27,8 +27,9 @@
 
 }
 
+// required delegate methods:
 - (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view {
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor blueColor]; // change view background to blue
 }
 
 - (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view {

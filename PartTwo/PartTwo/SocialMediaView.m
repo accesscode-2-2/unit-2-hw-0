@@ -16,8 +16,9 @@ NSString * const MyCustomNotificationName = @"MyCustomNotification"; // declare 
 
 @implementation SocialMediaView
 
-- (IBAction)commentButtonTapped:(UIButton *)sender {
-    [self.delegate socialMediaViewDidTapCommentButton:self];
+// required delegate methods:
+- (IBAction)commentButtonTapped:(UIButton *)sender { 
+    [self.delegate socialMediaViewDidTapCommentButton:self]; // connect delegate, when this button is tapped, pass message.
 }
 
 - (IBAction)likeButtonTapped:(UIButton *)sender {
