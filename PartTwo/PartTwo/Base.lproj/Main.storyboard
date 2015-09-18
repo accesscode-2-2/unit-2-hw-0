@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,85 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6NW-jw-gFa" customClass="CustomView">
+                                <rect key="frame" x="200" y="150" width="200" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04b-HM-Hgb">
+                                        <rect key="frame" x="0.0" y="100" width="200" height="100"/>
+                                        <state key="normal" title="LIKE"/>
+                                        <connections>
+                                            <action selector="likeButtonTapped:" destination="6NW-jw-gFa" eventType="touchUpInside" id="X0M-Fx-Ani"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKw-Oq-BxR">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                        <state key="normal" title="COMMENT"/>
+                                        <connections>
+                                            <action selector="commentButtonTapped:" destination="6NW-jw-gFa" eventType="touchUpInside" id="JMA-Mo-AZ2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpS-PY-5fe">
+                                        <rect key="frame" x="0.0" y="200" width="200" height="100"/>
+                                        <state key="normal" title="SHARE"/>
+                                        <connections>
+                                            <action selector="shareButtonTapped:" destination="6NW-jw-gFa" eventType="touchUpInside" id="Anv-Ef-CdS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.85796349419999995" blue="0.86445043210000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="04b-HM-Hgb" firstAttribute="centerY" secondItem="6NW-jw-gFa" secondAttribute="centerY" id="0yF-U9-v2G"/>
+                                    <constraint firstAttribute="width" constant="400" id="BDW-b1-rdN"/>
+                                    <constraint firstItem="SpS-PY-5fe" firstAttribute="top" secondItem="04b-HM-Hgb" secondAttribute="bottom" id="Crc-74-6RQ"/>
+                                    <constraint firstItem="SpS-PY-5fe" firstAttribute="height" secondItem="xKw-Oq-BxR" secondAttribute="height" id="LHw-N7-ouT"/>
+                                    <constraint firstAttribute="height" constant="150" id="Pqr-O3-IUI"/>
+                                    <constraint firstItem="04b-HM-Hgb" firstAttribute="top" secondItem="xKw-Oq-BxR" secondAttribute="bottom" id="QpE-rp-dt9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="T2s-pJ-1Jk"/>
+                                    <constraint firstAttribute="trailing" secondItem="xKw-Oq-BxR" secondAttribute="trailing" id="TPi-nZ-PL6"/>
+                                    <constraint firstItem="xKw-Oq-BxR" firstAttribute="top" secondItem="6NW-jw-gFa" secondAttribute="top" id="YAM-7r-eiC"/>
+                                    <constraint firstItem="xKw-Oq-BxR" firstAttribute="leading" secondItem="6NW-jw-gFa" secondAttribute="leading" id="aEJ-hC-fCM"/>
+                                    <constraint firstAttribute="trailing" secondItem="SpS-PY-5fe" secondAttribute="trailing" id="d9J-jD-6Rl"/>
+                                    <constraint firstItem="SpS-PY-5fe" firstAttribute="leading" secondItem="6NW-jw-gFa" secondAttribute="leading" id="g2W-2J-KPY"/>
+                                    <constraint firstItem="04b-HM-Hgb" firstAttribute="width" secondItem="xKw-Oq-BxR" secondAttribute="width" id="hxW-c5-0XH"/>
+                                    <constraint firstAttribute="width" constant="200" id="iNY-3c-PfL"/>
+                                    <constraint firstItem="SpS-PY-5fe" firstAttribute="width" secondItem="xKw-Oq-BxR" secondAttribute="width" id="n7s-hl-rCT"/>
+                                    <constraint firstItem="xKw-Oq-BxR" firstAttribute="centerX" secondItem="6NW-jw-gFa" secondAttribute="centerX" id="nVJ-CY-M6J"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="nlm-1Y-Umj"/>
+                                    <constraint firstItem="04b-HM-Hgb" firstAttribute="centerX" secondItem="6NW-jw-gFa" secondAttribute="centerX" id="tUy-ny-d5N"/>
+                                    <constraint firstItem="SpS-PY-5fe" firstAttribute="centerX" secondItem="6NW-jw-gFa" secondAttribute="centerX" id="tkJ-e6-4hs"/>
+                                    <constraint firstAttribute="bottom" secondItem="SpS-PY-5fe" secondAttribute="bottom" id="u0y-eB-tHC"/>
+                                    <constraint firstItem="04b-HM-Hgb" firstAttribute="height" secondItem="xKw-Oq-BxR" secondAttribute="height" id="xOl-sF-UOU"/>
+                                    <constraint firstAttribute="height" constant="300" id="yLc-wx-ZvL"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BDW-b1-rdN"/>
+                                        <exclude reference="Pqr-O3-IUI"/>
+                                        <exclude reference="T2s-pJ-1Jk"/>
+                                        <exclude reference="nlm-1Y-Umj"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="commentButton" destination="xKw-Oq-BxR" id="7na-SU-c6i"/>
+                                    <outlet property="likeButton" destination="04b-HM-Hgb" id="iPW-5r-hHw"/>
+                                    <outlet property="shareButton" destination="SpS-PY-5fe" id="YZc-kV-KTa"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97914456839999997" blue="0.28653356969999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6NW-jw-gFa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aDJ-qQ-3JY"/>
+                            <constraint firstItem="6NW-jw-gFa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hWR-bl-jDG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customView" destination="6NW-jw-gFa" id="dxz-b1-Y2R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="238"/>
         </scene>
     </scenes>
 </document>
