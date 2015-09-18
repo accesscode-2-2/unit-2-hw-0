@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SocialMediaViewControllerDelegate.h"
 
-@interface SocialMediaView : UIView
+@interface SocialMediaView : UIView 
 
+@property (nonatomic, weak) id <SocialMediaViewControllerDelegate> delegate;
 @end

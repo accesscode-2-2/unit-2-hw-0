@@ -38,6 +38,7 @@
 /* Begin PBXFileReference section */
 		0788C8AE1BAB4E2B00EFCB30 /* SocialMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaView.h; sourceTree = "<group>"; };
 		0788C8AF1BAB4E2B00EFCB30 /* SocialMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaView.m; sourceTree = "<group>"; };
+		0788C9031BABD2D500EFCB30 /* SocialMediaViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaViewControllerDelegate.h; sourceTree = "<group>"; };
 		8DD103441BA66E0900CE483B /* PartTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD103481BA66E0900CE483B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DD1034A1BA66E0900CE483B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 				8DD103501BA66E0900CE483B /* Main.storyboard */,
 				0788C8AE1BAB4E2B00EFCB30 /* SocialMediaView.h */,
 				0788C8AF1BAB4E2B00EFCB30 /* SocialMediaView.m */,
+				0788C9031BABD2D500EFCB30 /* SocialMediaViewControllerDelegate.h */,
 				8DD103531BA66E0900CE483B /* Assets.xcassets */,
 				8DD103551BA66E0900CE483B /* LaunchScreen.storyboard */,
 				8DD103581BA66E0900CE483B /* Info.plist */,
