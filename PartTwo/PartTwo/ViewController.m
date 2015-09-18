@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CGRect subviewDimensions = CGRectMake(0, 0, 0, 0);
+    CGRect subviewDimensions = CGRectMake(0, 0, 200.0, 240.0);
     self.socialMediaView = [[SocialMediaView alloc] initWithFrame:subviewDimensions];
     NSLog(@"%@", self.socialMediaView);
     
@@ -26,8 +26,8 @@
     
     [self.view addSubview:self.socialMediaView];
 
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.socialMediaView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.5 constant:0.0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.socialMediaView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:0.5 constant:0.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.socialMediaView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:self.socialMediaView.frame.size.height]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.socialMediaView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:self.socialMediaView.frame.size.width]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.socialMediaView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.socialMediaView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
 }

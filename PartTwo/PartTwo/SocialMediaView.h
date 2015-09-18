@@ -11,8 +11,5 @@
 @protocol SocialMediaViewDelegate;
 
 @interface SocialMediaView : UIView
-@property (strong, nonatomic) UIButton *commentButton;
-@property (strong, nonatomic) UIButton *likeButton;
-@property (strong, nonatomic) UIButton *shareButton;
 @property (weak, nonatomic) id<SocialMediaViewDelegate> delegate;
 @end
