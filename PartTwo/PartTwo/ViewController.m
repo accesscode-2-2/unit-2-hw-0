@@ -11,10 +11,16 @@
 #import "SocialMediaView.h"
 
 @interface ViewController () <SocialMediaDelegate>
+@property (weak, nonatomic) IBOutlet SocialMediaView *socialMediaView;
 
 @end
 
 @implementation ViewController
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    self.socialMediaView.delegate = self;
+}
 
 //- (void)colorPicked: (CIColor *)colorDisplayed {
 //    self.view.backgroundColor = [UIColor colorWithCIColor:colorDisplayed];
@@ -40,10 +46,7 @@
     NSLog(@"%@", colorAdded);
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

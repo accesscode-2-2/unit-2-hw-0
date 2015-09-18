@@ -80,6 +80,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lrK-zi-lM5"/>
+                    <connections>
+                        <outlet property="socialMediaView" destination="Oez-5E-r2O" id="g7I-fN-54z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
