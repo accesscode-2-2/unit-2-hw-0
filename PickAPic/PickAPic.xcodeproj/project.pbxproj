@@ -101,13 +101,13 @@
 		8D1F73BE1BA66AE50040D369 /* PickAPic */ = {
 			isa = PBXGroup;
 			children = (
-				8D1F73C21BA66AE50040D369 /* AppDelegate.h */,
-				8D1F73C31BA66AE50040D369 /* AppDelegate.m */,
+				8D1F73C81BA66AE50040D369 /* Main.storyboard */,
 				8D1F73C51BA66AE50040D369 /* ViewController.h */,
 				8D1F73C61BA66AE50040D369 /* ViewController.m */,
-				8D1F73C81BA66AE50040D369 /* Main.storyboard */,
 				8D1F73CB1BA66AE50040D369 /* Assets.xcassets */,
 				8D1F73CD1BA66AE50040D369 /* LaunchScreen.storyboard */,
+				8D1F73C21BA66AE50040D369 /* AppDelegate.h */,
+				8D1F73C31BA66AE50040D369 /* AppDelegate.m */,
 				8D1F73D01BA66AE50040D369 /* Info.plist */,
 				8D1F73BF1BA66AE50040D369 /* Supporting Files */,
 			);
@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					8D1F73BB1BA66AE50040D369 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = N48NM3R37Q;
 					};
 					8D1F73D41BA66AE50040D369 = {
 						CreatedOnToolsVersion = 7.0;
@@ -411,11 +412,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PickAPic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayunavogel.PickAPic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -423,11 +427,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PickAPic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayunavogel.PickAPic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
