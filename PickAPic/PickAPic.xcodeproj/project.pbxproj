@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D76548B1BA8ECD100C2AD00 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D76548A1BA8ECD100C2AD00 /* AVFoundation.framework */; };
+		5D7654D01BA8F71C00C2AD00 /* ImageChanged.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D7654CF1BA8F71C00C2AD00 /* ImageChanged.mp3 */; settings = {ASSET_TAGS = (); }; };
 		8D1F73C11BA66AE50040D369 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C01BA66AE50040D369 /* main.m */; };
 		8D1F73C41BA66AE50040D369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C31BA66AE50040D369 /* AppDelegate.m */; };
 		8D1F73C71BA66AE50040D369 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C61BA66AE50040D369 /* ViewController.m */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D76548A1BA8ECD100C2AD00 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5D7654CF1BA8F71C00C2AD00 /* ImageChanged.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ImageChanged.mp3; sourceTree = "<group>"; };
 		8D1F73BC1BA66AE50040D369 /* PickAPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickAPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1F73C01BA66AE50040D369 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1F73C21BA66AE50040D369 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D76548B1BA8ECD100C2AD00 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 		8D1F73B31BA66AE50040D369 = {
 			isa = PBXGroup;
 			children = (
+				5D76548A1BA8ECD100C2AD00 /* AVFoundation.framework */,
 				8D1F73BE1BA66AE50040D369 /* PickAPic */,
 				8D1F73D81BA66AE50040D369 /* PickAPicTests */,
 				8D1F73E31BA66AE50040D369 /* PickAPicUITests */,
@@ -117,6 +123,7 @@
 		8D1F73BF1BA66AE50040D369 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D7654CF1BA8F71C00C2AD00 /* ImageChanged.mp3 */,
 				8D1F73C01BA66AE50040D369 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -246,6 +253,7 @@
 				8D1F73CF1BA66AE50040D369 /* LaunchScreen.storyboard in Resources */,
 				8D1F73CC1BA66AE50040D369 /* Assets.xcassets in Resources */,
 				8D1F73CA1BA66AE50040D369 /* Main.storyboard in Resources */,
+				5D7654D01BA8F71C00C2AD00 /* ImageChanged.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,10 +420,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PickAPic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -424,10 +433,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PickAPic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -436,6 +446,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PickAPicTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,6 +459,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PickAPicTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -459,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = PickAPicUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPicUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -471,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = PickAPicUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPicUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
