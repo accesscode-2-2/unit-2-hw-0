@@ -7,25 +7,59 @@
 //
 
 #import "ViewController.h"
-#import "CustomView.h"
 
-@interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIView *CustomViewContainer;
+
+@interface ViewController ()  <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
 
 @end
 
 @implementation ViewController
 
--(void)viewDidLoad {
-    [super viewDidLoad];
-    
-    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomView" owner:self options:nil];
-    
-    CustomView *customView = [views firstObject];
-    
-    [self.CustomViewContainer addSubview:customView];
-    customView.frame = self.CustomViewContainer.bounds;
+
+
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:( NSDictionary *)info{
+        UIImage  *chosenImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+        self.imageView.image = chosenImage;
+
+        [self.navigationController dismissViewControllerAnimated:picker completion:nil];
+    }
+
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+        [picker dismissViewControllerAnimated:YES completion:nil];
+    }
+
+
+
+- (IBAction)camera:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeCamera]) {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = NO;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        
+        [self presentViewController:picker animated:YES completion:nil];
+        
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"No Camera Available." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
+- (IBAction)cameraRoll:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = NO;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        
+        [self presentViewController:picker animated:YES completion:nil];
+        
+    }
+}
 
 @end
