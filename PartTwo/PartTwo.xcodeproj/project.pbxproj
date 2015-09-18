@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B77C01A1BAC745A0017B3C6 /* CustomSocialMediaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B77C0191BAC745A0017B3C6 /* CustomSocialMediaView.xib */; settings = {ASSET_TAGS = (); }; };
+		6B77C01D1BAC77240017B3C6 /* CustomSocialMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B77C01C1BAC77240017B3C6 /* CustomSocialMediaViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6B77C0201BAC77A50017B3C6 /* CustomSocialMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B77C01F1BAC77A50017B3C6 /* CustomSocialMediaView.m */; settings = {ASSET_TAGS = (); }; };
 		6B98A6491BA8C4CB005BB35D /* SocialMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B98A6481BA8C4CB005BB35D /* SocialMediaView.m */; };
 		8DD103491BA66E0900CE483B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103481BA66E0900CE483B /* main.m */; };
 		8DD1034C1BA66E0900CE483B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1034B1BA66E0900CE483B /* AppDelegate.m */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B77C0191BAC745A0017B3C6 /* CustomSocialMediaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSocialMediaView.xib; sourceTree = "<group>"; };
+		6B77C01B1BAC77240017B3C6 /* CustomSocialMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSocialMediaViewController.h; sourceTree = "<group>"; };
+		6B77C01C1BAC77240017B3C6 /* CustomSocialMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSocialMediaViewController.m; sourceTree = "<group>"; };
+		6B77C01E1BAC77A50017B3C6 /* CustomSocialMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSocialMediaView.h; sourceTree = "<group>"; };
+		6B77C01F1BAC77A50017B3C6 /* CustomSocialMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSocialMediaView.m; sourceTree = "<group>"; };
+		6B77C0211BAC7DD10017B3C6 /* CustomSocialMediaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSocialMediaDelegate.h; sourceTree = "<group>"; };
 		6B98A6471BA8C4CB005BB35D /* SocialMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaView.h; sourceTree = "<group>"; };
 		6B98A6481BA8C4CB005BB35D /* SocialMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaView.m; sourceTree = "<group>"; };
 		6B98A64A1BA8C609005BB35D /* SocialMediaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +121,12 @@
 				6B98A6481BA8C4CB005BB35D /* SocialMediaView.m */,
 				8DD1034D1BA66E0900CE483B /* ViewController.h */,
 				8DD1034E1BA66E0900CE483B /* ViewController.m */,
+				6B77C0211BAC7DD10017B3C6 /* CustomSocialMediaDelegate.h */,
+				6B77C0191BAC745A0017B3C6 /* CustomSocialMediaView.xib */,
+				6B77C01E1BAC77A50017B3C6 /* CustomSocialMediaView.h */,
+				6B77C01F1BAC77A50017B3C6 /* CustomSocialMediaView.m */,
+				6B77C01B1BAC77240017B3C6 /* CustomSocialMediaViewController.h */,
+				6B77C01C1BAC77240017B3C6 /* CustomSocialMediaViewController.m */,
 				8DD103501BA66E0900CE483B /* Main.storyboard */,
 				8DD103531BA66E0900CE483B /* Assets.xcassets */,
 				8DD103551BA66E0900CE483B /* LaunchScreen.storyboard */,
@@ -253,6 +268,7 @@
 				8DD103571BA66E0900CE483B /* LaunchScreen.storyboard in Resources */,
 				8DD103541BA66E0900CE483B /* Assets.xcassets in Resources */,
 				8DD103521BA66E0900CE483B /* Main.storyboard in Resources */,
+				6B77C01A1BAC745A0017B3C6 /* CustomSocialMediaView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD1034F1BA66E0900CE483B /* ViewController.m in Sources */,
+				6B77C01D1BAC77240017B3C6 /* CustomSocialMediaViewController.m in Sources */,
 				8DD1034C1BA66E0900CE483B /* AppDelegate.m in Sources */,
+				6B77C0201BAC77A50017B3C6 /* CustomSocialMediaView.m in Sources */,
 				6B98A6491BA8C4CB005BB35D /* SocialMediaView.m in Sources */,
 				8DD103491BA66E0900CE483B /* main.m in Sources */,
 			);
