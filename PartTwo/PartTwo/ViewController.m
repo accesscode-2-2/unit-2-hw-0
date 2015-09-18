@@ -9,19 +9,43 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (strong, nonatomic) IBOutlet SocialMediaView *socialMediaView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    CGRect subviewDimensions = CGRectMake(0, 0, 200.0, 240.0);
+    self.socialMediaView = [[SocialMediaView alloc] initWithFrame:subviewDimensions];
+    NSLog(@"%@", self.socialMediaView);
+    
+    self.socialMediaView.delegate = self;
+    self.socialMediaView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.view addSubview:self.socialMediaView];
+
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.socialMediaView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:self.socialMediaView.frame.size.height]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.socialMediaView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:self.socialMediaView.frame.size.width]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.socialMediaView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.socialMediaView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - SocialMediaViewDelegate methods
+- (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view {
+    self.view.backgroundColor = [UIColor greenColor];
+    [self.view setNeedsDisplay];
+}
+
+- (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view {
+    self.view.backgroundColor = [UIColor redColor];
+    [self.view setNeedsDisplay];
+}
+
+- (void)socialMediaViewDidTapShareButton:(SocialMediaView *)view {
+    self.view.backgroundColor = [UIColor purpleColor];
+    [self.view setNeedsDisplay];
 }
 
 @end
