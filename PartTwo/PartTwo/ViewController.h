@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomView.h"
+#import "SocialMediaDelegate.h"
+
+
+
 
 @interface ViewController : UIViewController
 

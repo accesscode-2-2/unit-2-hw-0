@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jc2-9t-8NN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Auv-mP-Itf" customClass="CustomView">
+                                        <rect key="frame" x="200" y="188" width="200" height="225"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ok6-nt-OzM">
+                                                <rect key="frame" x="77" y="98" width="46" height="30"/>
+                                                <state key="normal" title="Like"/>
+                                                <connections>
+                                                    <action selector="likeButtonTapped:" destination="Auv-mP-Itf" eventType="touchUpInside" id="KfE-B4-7w0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zV2-Sc-15a">
+                                                <rect key="frame" x="77" y="28" width="46" height="30"/>
+                                                <state key="normal" title="Comment"/>
+                                                <connections>
+                                                    <action selector="commentButtonTapped:" destination="Auv-mP-Itf" eventType="touchUpInside" id="bhG-f6-Pl0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8t-2X-KyW">
+                                                <rect key="frame" x="77" y="168" width="46" height="30"/>
+                                                <state key="normal" title="Share"/>
+                                                <connections>
+                                                    <action selector="shareButtonTapped:" destination="Auv-mP-Itf" eventType="touchUpInside" id="o6w-O0-OqQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="V8t-2X-KyW" firstAttribute="top" secondItem="Ok6-nt-OzM" secondAttribute="bottom" constant="40" id="ES0-3K-O5s"/>
+                                            <constraint firstAttribute="width" constant="200" id="IWz-Ct-2Sz"/>
+                                            <constraint firstItem="Ok6-nt-OzM" firstAttribute="top" secondItem="Auv-mP-Itf" secondAttribute="top" constant="65" id="NL4-9i-aC9"/>
+                                            <constraint firstItem="Ok6-nt-OzM" firstAttribute="centerX" secondItem="Auv-mP-Itf" secondAttribute="centerX" id="QaT-kp-EQG"/>
+                                            <constraint firstItem="zV2-Sc-15a" firstAttribute="centerX" secondItem="Auv-mP-Itf" secondAttribute="centerX" id="TKt-vp-Ydb"/>
+                                            <constraint firstItem="Ok6-nt-OzM" firstAttribute="centerX" secondItem="Auv-mP-Itf" secondAttribute="centerX" id="YxT-vt-F2M"/>
+                                            <constraint firstItem="Ok6-nt-OzM" firstAttribute="top" secondItem="zV2-Sc-15a" secondAttribute="bottom" constant="40" id="b60-uD-Ato"/>
+                                            <constraint firstAttribute="height" constant="225" id="bi3-Ie-aqM"/>
+                                            <constraint firstItem="Ok6-nt-OzM" firstAttribute="centerY" secondItem="Auv-mP-Itf" secondAttribute="centerY" id="qNl-hO-wxB"/>
+                                            <constraint firstItem="V8t-2X-KyW" firstAttribute="centerX" secondItem="Auv-mP-Itf" secondAttribute="centerX" id="xQH-5r-lNG"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="NL4-9i-aC9"/>
+                                                <exclude reference="YxT-vt-F2M"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Auv-mP-Itf" firstAttribute="centerY" secondItem="Jc2-9t-8NN" secondAttribute="centerY" id="1j4-FP-G16"/>
+                                    <constraint firstItem="Auv-mP-Itf" firstAttribute="centerX" secondItem="Jc2-9t-8NN" secondAttribute="centerX" id="VPs-bu-b7X"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jc2-9t-8NN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="fTt-jp-BHm"/>
+                            <constraint firstItem="Jc2-9t-8NN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="hId-DM-D2w"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jc2-9t-8NN" secondAttribute="bottom" id="l2r-PI-f5n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jc2-9t-8NN" secondAttribute="trailing" constant="-20" id="xd2-yx-VHA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="Jc2-9t-8NN" id="MEt-Mf-r0B"/>
+                        <outlet property="customView" destination="Auv-mP-Itf" id="SYk-Fu-frs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="312"/>
         </scene>
     </scenes>
 </document>
