@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewControllerID" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,143 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYa-rM-rqm" customClass="SocialMediaView">
+                                <rect key="frame" x="200" y="150" width="200" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvS-ws-54a">
+                                        <rect key="frame" x="3" y="102" width="194" height="97"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="90P-MO-dk0"/>
+                                            <constraint firstAttribute="height" constant="97" id="PLt-QY-N25"/>
+                                        </constraints>
+                                        <state key="normal" title="Like"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="90P-MO-dk0"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="likeButtonTapped:" destination="eYa-rM-rqm" eventType="touchUpInside" id="4Jk-v4-sgJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCn-WH-rQC">
+                                        <rect key="frame" x="3" y="3" width="194" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="99" id="a6b-9t-OfL"/>
+                                            <constraint firstAttribute="height" constant="90" id="pmK-Eg-Lsv"/>
+                                        </constraints>
+                                        <state key="normal" title="Comment"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="pmK-Eg-Lsv"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="commentButtonTapped:" destination="eYa-rM-rqm" eventType="touchUpInside" id="MnY-nm-koN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CD9-zi-ben">
+                                        <rect key="frame" x="3" y="199" width="194" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="99" id="LIF-UW-MfC"/>
+                                            <constraint firstAttribute="height" constant="90" id="akf-wE-h6F"/>
+                                        </constraints>
+                                        <state key="normal" title="Share"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="akf-wE-h6F"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="shareButtonTapped:" destination="eYa-rM-rqm" eventType="touchUpInside" id="jjt-ea-CsX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HvS-ws-54a" secondAttribute="trailing" constant="3" id="0An-n6-9PL"/>
+                                    <constraint firstItem="CD9-zi-ben" firstAttribute="leading" secondItem="eYa-rM-rqm" secondAttribute="leading" constant="3" id="1Vg-ZY-cir"/>
+                                    <constraint firstAttribute="width" constant="200" id="972-nD-6gV"/>
+                                    <constraint firstAttribute="trailing" secondItem="HvS-ws-54a" secondAttribute="trailing" id="BEf-V0-OKN"/>
+                                    <constraint firstItem="HvS-ws-54a" firstAttribute="leading" secondItem="eYa-rM-rqm" secondAttribute="leading" id="Bk0-Wd-Ies"/>
+                                    <constraint firstAttribute="trailing" secondItem="hCn-WH-rQC" secondAttribute="trailing" constant="3" id="FBI-vj-4T8"/>
+                                    <constraint firstItem="CD9-zi-ben" firstAttribute="top" secondItem="HvS-ws-54a" secondAttribute="bottom" id="FkY-Tg-Hry"/>
+                                    <constraint firstItem="hCn-WH-rQC" firstAttribute="centerX" secondItem="eYa-rM-rqm" secondAttribute="centerX" id="GQj-S7-lxo"/>
+                                    <constraint firstItem="HvS-ws-54a" firstAttribute="top" secondItem="hCn-WH-rQC" secondAttribute="bottom" constant="25" id="IcE-Sd-Ssb"/>
+                                    <constraint firstItem="HvS-ws-54a" firstAttribute="centerX" secondItem="eYa-rM-rqm" secondAttribute="centerX" id="N4z-3Z-yxw"/>
+                                    <constraint firstAttribute="height" constant="300" id="OOc-yJ-bNk"/>
+                                    <constraint firstItem="HvS-ws-54a" firstAttribute="top" secondItem="hCn-WH-rQC" secondAttribute="bottom" id="Q27-Yo-Opv"/>
+                                    <constraint firstItem="hCn-WH-rQC" firstAttribute="top" secondItem="eYa-rM-rqm" secondAttribute="top" id="QNG-Rb-k8h"/>
+                                    <constraint firstItem="HvS-ws-54a" firstAttribute="centerY" secondItem="eYa-rM-rqm" secondAttribute="centerY" id="Qkh-yw-gHk"/>
+                                    <constraint firstItem="CD9-zi-ben" firstAttribute="top" secondItem="HvS-ws-54a" secondAttribute="bottom" constant="8" id="QlS-R6-TeO"/>
+                                    <constraint firstItem="HvS-ws-54a" firstAttribute="leading" secondItem="eYa-rM-rqm" secondAttribute="leading" constant="3" id="Rgh-Eh-8B9"/>
+                                    <constraint firstItem="hCn-WH-rQC" firstAttribute="leading" secondItem="eYa-rM-rqm" secondAttribute="leading" id="Rkm-P0-f85"/>
+                                    <constraint firstItem="hCn-WH-rQC" firstAttribute="leading" secondItem="eYa-rM-rqm" secondAttribute="leading" constant="3" id="SGc-ez-Mt4"/>
+                                    <constraint firstAttribute="bottom" secondItem="CD9-zi-ben" secondAttribute="bottom" id="c2s-tr-dbw"/>
+                                    <constraint firstItem="HvS-ws-54a" firstAttribute="centerY" secondItem="eYa-rM-rqm" secondAttribute="centerY" id="equ-Lo-CW8"/>
+                                    <constraint firstAttribute="trailing" secondItem="hCn-WH-rQC" secondAttribute="trailing" id="h2T-Fe-LUc"/>
+                                    <constraint firstItem="CD9-zi-ben" firstAttribute="leading" secondItem="eYa-rM-rqm" secondAttribute="leading" id="jHN-Y7-HgV"/>
+                                    <constraint firstItem="HvS-ws-54a" firstAttribute="top" secondItem="hCn-WH-rQC" secondAttribute="bottom" id="jO4-nB-0Lp"/>
+                                    <constraint firstAttribute="trailing" secondItem="CD9-zi-ben" secondAttribute="trailing" constant="3" id="kEv-ph-fVf"/>
+                                    <constraint firstItem="CD9-zi-ben" firstAttribute="top" secondItem="hCn-WH-rQC" secondAttribute="bottom" constant="37" id="kLP-aP-Hzo"/>
+                                    <constraint firstAttribute="trailing" secondItem="CD9-zi-ben" secondAttribute="trailing" id="npx-cU-JdY"/>
+                                    <constraint firstItem="CD9-zi-ben" firstAttribute="top" secondItem="HvS-ws-54a" secondAttribute="bottom" constant="25" id="skv-4o-wpU"/>
+                                    <constraint firstItem="HvS-ws-54a" firstAttribute="centerY" secondItem="eYa-rM-rqm" secondAttribute="centerY" id="viY-Fx-iR7"/>
+                                    <constraint firstItem="CD9-zi-ben" firstAttribute="centerX" secondItem="eYa-rM-rqm" secondAttribute="centerX" id="zEw-jh-i11"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GQj-S7-lxo"/>
+                                        <exclude reference="QNG-Rb-k8h"/>
+                                        <exclude reference="Rkm-P0-f85"/>
+                                        <exclude reference="h2T-Fe-LUc"/>
+                                        <exclude reference="BEf-V0-OKN"/>
+                                        <exclude reference="Bk0-Wd-Ies"/>
+                                        <exclude reference="IcE-Sd-Ssb"/>
+                                        <exclude reference="N4z-3Z-yxw"/>
+                                        <exclude reference="Qkh-yw-gHk"/>
+                                        <exclude reference="jO4-nB-0Lp"/>
+                                        <exclude reference="viY-Fx-iR7"/>
+                                        <exclude reference="QlS-R6-TeO"/>
+                                        <exclude reference="c2s-tr-dbw"/>
+                                        <exclude reference="jHN-Y7-HgV"/>
+                                        <exclude reference="kLP-aP-Hzo"/>
+                                        <exclude reference="npx-cU-JdY"/>
+                                        <exclude reference="skv-4o-wpU"/>
+                                        <exclude reference="zEw-jh-i11"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eYa-rM-rqm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="JV9-QJ-rGD"/>
+                            <constraint firstItem="eYa-rM-rqm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="KYi-sp-lN4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eYa-rM-rqm" secondAttribute="trailing" constant="80" id="ZFZ-aH-Ay3"/>
+                            <constraint firstItem="eYa-rM-rqm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ime-js-Pr7"/>
+                            <constraint firstItem="eYa-rM-rqm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iqc-ak-FM9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eYa-rM-rqm" secondAttribute="bottom" constant="150" id="k9b-0b-o10"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JV9-QJ-rGD"/>
+                                <exclude reference="KYi-sp-lN4"/>
+                                <exclude reference="ZFZ-aH-Ay3"/>
+                                <exclude reference="k9b-0b-o10"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="commentButton" destination="hCn-WH-rQC" id="IyB-Ty-nc7"/>
+                        <outlet property="likeButton" destination="HvS-ws-54a" id="Tvy-fD-B37"/>
+                        <outlet property="shareButton" destination="CD9-zi-ben" id="Byb-HM-MjP"/>
+                        <outlet property="socialMediaView" destination="eYa-rM-rqm" id="HPo-OP-3h2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="366"/>
         </scene>
     </scenes>
 </document>

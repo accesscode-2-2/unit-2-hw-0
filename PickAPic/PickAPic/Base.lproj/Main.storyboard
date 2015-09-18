@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -10,18 +10,59 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="xrW-VK-ALX"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ML-fs-k1p"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fkq-kR-Be7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="WR7-6E-fXP"/>
+                                    <constraint firstAttribute="height" constant="520" id="ac6-KY-HX7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpl-AM-V5A">
+                                <rect key="frame" x="160" y="520" width="160" height="48"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hME-xV-cW7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbj-FL-9uj">
+                                <rect key="frame" x="0.0" y="520" width="160" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="OuS-h2-bsG"/>
+                                </constraints>
+                                <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="photoLibraryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmy-XD-oyF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fkq-kR-Be7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5Ey-TN-ypw"/>
+                            <constraint firstItem="Fkq-kR-Be7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Jl-kZ-R2d"/>
+                            <constraint firstAttribute="trailing" secondItem="zpl-AM-V5A" secondAttribute="trailing" id="GQ9-Rh-Rg9"/>
+                            <constraint firstItem="zpl-AM-V5A" firstAttribute="top" secondItem="Fkq-kR-Be7" secondAttribute="bottom" id="W0a-me-TTD"/>
+                            <constraint firstItem="bbj-FL-9uj" firstAttribute="top" secondItem="Fkq-kR-Be7" secondAttribute="bottom" id="eqz-Iq-RIt"/>
+                            <constraint firstAttribute="trailing" secondItem="Fkq-kR-Be7" secondAttribute="trailing" id="glN-aD-rX5"/>
+                            <constraint firstItem="9ML-fs-k1p" firstAttribute="top" secondItem="zpl-AM-V5A" secondAttribute="bottom" id="hUP-TG-CcL"/>
+                            <constraint firstItem="bbj-FL-9uj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kpc-Fm-rN8"/>
+                            <constraint firstItem="zpl-AM-V5A" firstAttribute="width" secondItem="bbj-FL-9uj" secondAttribute="width" id="r7g-S0-5GD"/>
+                            <constraint firstItem="9ML-fs-k1p" firstAttribute="top" secondItem="bbj-FL-9uj" secondAttribute="bottom" id="zc0-jX-l7Y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Fkq-kR-Be7" id="0P1-vB-SI7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="322"/>
+            <point key="canvasLocation" x="200" y="304"/>
         </scene>
     </scenes>
 </document>

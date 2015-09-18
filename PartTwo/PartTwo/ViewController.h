@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *commentButton;
+
+@property (weak, nonatomic) IBOutlet UIButton * likeButton;
+@property (weak, nonatomic) IBOutlet UIButton * shareButton;
 
 @end
 
