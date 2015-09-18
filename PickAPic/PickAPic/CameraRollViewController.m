@@ -32,15 +32,12 @@
     [self presentViewController:self.imagePicker animated:YES completion:nil];
     
 
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    } else {
-        self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        
-    }
- 
-
-    
+//    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+//        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//    } else {
+//        self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//        
+//    }
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
