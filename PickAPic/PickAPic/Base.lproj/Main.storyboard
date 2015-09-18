@@ -17,10 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pM1-mc-cLK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pM1-mc-cLK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="415"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="TQx-mH-xZ6"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2no-li-ENr">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2no-li-ENr">
                                 <rect key="frame" x="133" y="434" width="54" height="30"/>
                                 <state key="normal" title="take pic"/>
                                 <connections>
@@ -36,6 +39,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pM1-mc-cLK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5x4-MH-HgP"/>
+                            <constraint firstItem="pM1-mc-cLK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OCa-z0-F7w"/>
+                            <constraint firstItem="2no-li-ENr" firstAttribute="top" secondItem="pM1-mc-cLK" secondAttribute="bottom" constant="19" id="gC3-Mf-9Aw"/>
+                            <constraint firstAttribute="trailing" secondItem="pM1-mc-cLK" secondAttribute="trailing" id="y2h-jD-4zl"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="pM1-mc-cLK" id="c9s-Xz-TeR"/>
