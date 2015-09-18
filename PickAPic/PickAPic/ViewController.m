@@ -16,7 +16,19 @@
 
 @implementation ViewController
 
-
+    // captures the image and saves the image before the new screen loads
+- (UIImage *)captureImage {
+   
+    UIGraphicsBeginImageContext(self.view.bounds.size);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage *imageView = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageWriteToSavedPhotosAlbum(imageView, nil, nil, nil);
+    
+    //if you need to save
+    return imageView;
+};
 
 - (IBAction)takePic:(id)sender {
     
@@ -25,11 +37,14 @@
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
+
+    
     [self presentViewController:picker animated:YES completion:NULL];
         
 }
 
 - (IBAction)selectPic:(UIButton *)sender {
+    
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -38,6 +53,13 @@
     
     [self presentViewController:picker animated:YES completion:NULL];
 
+}
+
+- (IBAction)saveButton:(id)sender {
+    
+    if (self.imageView.image != nil) {
+        [self captureImage];
+    }
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
