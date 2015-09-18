@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D3A247F1BA76BD3008E7269 /* SocialMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A247E1BA76BD3008E7269 /* SocialMediaView.m */; };
+		3D6A20A71BA9F3F900ECAD1D /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6A20A61BA9F3F900ECAD1D /* CustomView.xib */; };
+		3D6A20AA1BA9F56D00ECAD1D /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6A20A91BA9F56D00ECAD1D /* CustomView.m */; };
+		3D6A20B01BAA02C500ECAD1D /* BackgroundGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6A20AF1BAA02C500ECAD1D /* BackgroundGradient.m */; };
 		8DD103491BA66E0900CE483B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103481BA66E0900CE483B /* main.m */; };
 		8DD1034C1BA66E0900CE483B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1034B1BA66E0900CE483B /* AppDelegate.m */; };
 		8DD1034F1BA66E0900CE483B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1034E1BA66E0900CE483B /* ViewController.m */; };
 		8DD103521BA66E0900CE483B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD103501BA66E0900CE483B /* Main.storyboard */; };
 		8DD103541BA66E0900CE483B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DD103531BA66E0900CE483B /* Assets.xcassets */; };
-		8DD103571BA66E0900CE483B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD103551BA66E0900CE483B /* LaunchScreen.storyboard */; };
 		8DD103621BA66E0900CE483B /* PartTwoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103611BA66E0900CE483B /* PartTwoTests.m */; };
 		8DD1036D1BA66E0900CE483B /* PartTwoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1036C1BA66E0900CE483B /* PartTwoUITests.m */; };
 /* End PBXBuildFile section */
@@ -36,9 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D3A247D1BA76BD3008E7269 /* SocialMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaView.h; sourceTree = "<group>"; };
-		3D3A247E1BA76BD3008E7269 /* SocialMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaView.m; sourceTree = "<group>"; };
 		3D3A24801BA76BE3008E7269 /* SocialMediaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaDelegate.h; sourceTree = "<group>"; };
+		3D6A20A61BA9F3F900ECAD1D /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		3D6A20A81BA9F56D00ECAD1D /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		3D6A20A91BA9F56D00ECAD1D /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		3D6A20AE1BAA02C500ECAD1D /* BackgroundGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundGradient.h; sourceTree = "<group>"; };
+		3D6A20AF1BAA02C500ECAD1D /* BackgroundGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundGradient.m; sourceTree = "<group>"; };
 		8DD103441BA66E0900CE483B /* PartTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD103481BA66E0900CE483B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DD1034A1BA66E0900CE483B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,7 +51,6 @@
 		8DD1034E1BA66E0900CE483B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8DD103511BA66E0900CE483B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DD103531BA66E0900CE483B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8DD103561BA66E0900CE483B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DD103581BA66E0900CE483B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DD1035D1BA66E0900CE483B /* PartTwoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartTwoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD103611BA66E0900CE483B /* PartTwoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PartTwoTests.m; sourceTree = "<group>"; };
@@ -109,14 +112,16 @@
 				8DD1034B1BA66E0900CE483B /* AppDelegate.m */,
 				8DD1034D1BA66E0900CE483B /* ViewController.h */,
 				8DD1034E1BA66E0900CE483B /* ViewController.m */,
-				3D3A247D1BA76BD3008E7269 /* SocialMediaView.h */,
-				3D3A247E1BA76BD3008E7269 /* SocialMediaView.m */,
 				3D3A24801BA76BE3008E7269 /* SocialMediaDelegate.h */,
 				8DD103501BA66E0900CE483B /* Main.storyboard */,
 				8DD103531BA66E0900CE483B /* Assets.xcassets */,
-				8DD103551BA66E0900CE483B /* LaunchScreen.storyboard */,
 				8DD103581BA66E0900CE483B /* Info.plist */,
 				8DD103471BA66E0900CE483B /* Supporting Files */,
+				3D6A20A61BA9F3F900ECAD1D /* CustomView.xib */,
+				3D6A20A81BA9F56D00ECAD1D /* CustomView.h */,
+				3D6A20A91BA9F56D00ECAD1D /* CustomView.m */,
+				3D6A20AE1BAA02C500ECAD1D /* BackgroundGradient.h */,
+				3D6A20AF1BAA02C500ECAD1D /* BackgroundGradient.m */,
 			);
 			path = PartTwo;
 			sourceTree = "<group>";
@@ -250,9 +255,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD103571BA66E0900CE483B /* LaunchScreen.storyboard in Resources */,
 				8DD103541BA66E0900CE483B /* Assets.xcassets in Resources */,
 				8DD103521BA66E0900CE483B /* Main.storyboard in Resources */,
+				3D6A20A71BA9F3F900ECAD1D /* CustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,9 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6A20AA1BA9F56D00ECAD1D /* CustomView.m in Sources */,
 				8DD1034F1BA66E0900CE483B /* ViewController.m in Sources */,
 				8DD1034C1BA66E0900CE483B /* AppDelegate.m in Sources */,
-				3D3A247F1BA76BD3008E7269 /* SocialMediaView.m in Sources */,
+				3D6A20B01BAA02C500ECAD1D /* BackgroundGradient.m in Sources */,
 				8DD103491BA66E0900CE483B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,14 +328,6 @@
 				8DD103511BA66E0900CE483B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8DD103551BA66E0900CE483B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8DD103561BA66E0900CE483B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -444,6 +442,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PartTwoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PartTwoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -456,6 +455,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PartTwoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PartTwoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = PartTwoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PartTwoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -479,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = PartTwoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PartTwoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

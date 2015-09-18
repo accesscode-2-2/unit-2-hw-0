@@ -13,7 +13,21 @@
 
 @implementation ViewController
 
+#pragma mark - Camera and Camera Roll
+
+- (void)alertTheViewAboutCamera {
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error"
+                                                   message:@"No camera found"
+                                                  delegate:self
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil];
+    
+    [alert show];
+}
+
 - (IBAction)camera:(id)sender {
+    
     if ([UIImagePickerController isSourceTypeAvailable:
          UIImagePickerControllerSourceTypeCamera]) {
         
@@ -24,6 +38,10 @@
         [self presentViewController:imagePicker
                            animated:YES completion:nil];
         self.newMedia = YES;
+    }
+    
+    else {
+        [self alertTheViewAboutCamera];
     }
     
 }
@@ -42,8 +60,6 @@
     }
 }
 
-
-#pragma mark -
 #pragma mark UIImagePickerControllerDelegate
 
 -(void)imagePickerController:(UIImagePickerController *)picker

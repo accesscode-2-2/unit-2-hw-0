@@ -8,33 +8,56 @@
 
 #import "ViewController.h"
 #import "SocialMediaDelegate.h"
-#import "SocialMediaView.h"
+#import "CustomView.h"
+#import "BackgroundGradient.h"
 
 @interface ViewController () <UINavigationControllerDelegate, SocialMediaDelegate>
 
-@property (weak, nonatomic) IBOutlet SocialMediaView *view;
+@property (weak, nonatomic) IBOutlet UIView *customView;
+
+@property (nonatomic) CAGradientLayer *bgLayer;
 
 @end
 
 @implementation ViewController
 
-@dynamic view;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.delegate = self;
+    
+    
+    NSArray *views = [[NSBundle mainBundle]loadNibNamed:@"CustomView"owner:self options:nil];
+    
+    CustomView *customView = [views firstObject];
+    
+    [self.customView addSubview:customView];
+    
+    customView.frame = self.customView.bounds;
+    
+    customView.delegate = self;
+    
 }
 
 
--(void)socialMediaViewDidTapLikeButton:(CIColor *)likeColor {
-    self.view.backgroundColor = [UIColor colorWithCIColor:likeColor];
-    
+
+- (void)socialMediaViewDidTapCommentButton {
+    [self.bgLayer removeFromSuperlayer];
+    self.bgLayer = [BackgroundGradient greenGradient];
+    self.bgLayer.frame = self.view.bounds;
+    [self.view.layer insertSublayer:self.bgLayer atIndex:0];
 }
-- (void)socialMediaViewDidTapCommentButton:(CIColor *)commentColor {
-    
+
+-(void)socialMediaViewDidTapLikeButton {
+    [self.bgLayer removeFromSuperlayer];
+    self.bgLayer = [BackgroundGradient blueGradient];
+    self.bgLayer.frame = self.view.bounds;
+    [self.view.layer insertSublayer:self.bgLayer atIndex:0];
 }
-- (void)socialMediaViewDidTapShareButton:(CIColor *)shareColor {
-    
+- (void)socialMediaViewDidTapShareButton {
+    [self.bgLayer removeFromSuperlayer];
+    self.bgLayer = [BackgroundGradient redGradient];
+    self.bgLayer.frame = self.view.bounds;
+    [self.view.layer insertSublayer:self.bgLayer atIndex:0];
 }
 
 - (void)testing: (NSString *)stringTest{

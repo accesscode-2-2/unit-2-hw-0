@@ -11,9 +11,9 @@
 @protocol SocialMediaDelegate <NSObject>
 
 @required
-- (void)socialMediaViewDidTapLikeButton:(CIColor *)likeColor;
-- (void)socialMediaViewDidTapCommentButton:(CIColor *)commentColor;
-- (void)socialMediaViewDidTapShareButton:(CIColor *)shareColor;
+- (void)socialMediaViewDidTapLikeButton;
+- (void)socialMediaViewDidTapCommentButton;
+- (void)socialMediaViewDidTapShareButton;
 - (void)testing: (NSString *)stringTest;
 
 @end
