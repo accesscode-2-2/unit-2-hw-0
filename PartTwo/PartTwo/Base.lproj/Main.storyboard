@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--UIView-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -69,7 +69,7 @@
                             <constraint firstItem="cPP-9t-DPV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oTK-go-tg2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="UIView" image="UIView" id="fRl-RG-ts1"/>
+                    <tabBarItem key="tabBarItem" title="" image="UIView" id="fRl-RG-ts1"/>
                     <connections>
                         <outlet property="commentButtonProperty" destination="sGb-Dk-zKO" id="Cwm-Xf-U3k"/>
                         <outlet property="likeButtonProperty" destination="fN5-wI-g6j" id="s78-oa-FPU"/>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="676" y="-15"/>
         </scene>
-        <!--XIB File-->
+        <!--Xib View Controller-->
         <scene sceneID="tRN-Mq-RsL">
             <objects>
-                <viewController id="G6X-Zm-wGD" sceneMemberID="viewController">
+                <viewController id="G6X-Zm-wGD" customClass="xibViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2kY-RM-fz2"/>
                         <viewControllerLayoutGuide type="bottom" id="K4B-xh-zA8"/>
@@ -92,9 +92,18 @@
                     <view key="view" contentMode="scaleToFill" id="XXv-OB-6Z8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcR-Xo-Sc2">
+                                <rect key="frame" x="32" y="125" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="XIB File" id="csT-P6-8Ut"/>
+                    <tabBarItem key="tabBarItem" title="" image="xib" id="csT-P6-8Ut"/>
+                    <connections>
+                        <outlet property="customView" destination="pcR-Xo-Sc2" id="L96-cp-s2a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qiv-LJ-wtn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,9 +129,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="UIView" width="91" height="37"/>
+        <image name="UIView" width="122" height="68"/>
         <image name="comment" width="820" height="346"/>
         <image name="like" width="820" height="346"/>
         <image name="share" width="820" height="346"/>
+        <image name="xib" width="122" height="68"/>
     </resources>
 </document>
