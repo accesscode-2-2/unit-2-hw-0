@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vkk-JS-EO4">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--UIView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -69,6 +69,7 @@
                             <constraint firstItem="cPP-9t-DPV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oTK-go-tg2"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="UIView" image="UIView" id="fRl-RG-ts1"/>
                     <connections>
                         <outlet property="commentButtonProperty" destination="sGb-Dk-zKO" id="Cwm-Xf-U3k"/>
                         <outlet property="likeButtonProperty" destination="fN5-wI-g6j" id="s78-oa-FPU"/>
@@ -78,12 +79,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="315"/>
+            <point key="canvasLocation" x="676" y="-15"/>
+        </scene>
+        <!--XIB File-->
+        <scene sceneID="tRN-Mq-RsL">
+            <objects>
+                <viewController id="G6X-Zm-wGD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2kY-RM-fz2"/>
+                        <viewControllerLayoutGuide type="bottom" id="K4B-xh-zA8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XXv-OB-6Z8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="XIB File" id="csT-P6-8Ut"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qiv-LJ-wtn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="653"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Tjd-Yd-hbI">
+            <objects>
+                <tabBarController id="vkk-JS-EO4" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="36M-cg-a56">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="luD-kj-bPX"/>
+                        <segue destination="G6X-Zm-wGD" kind="relationship" relationship="viewControllers" id="tUo-ae-g4V"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5j-lO-JvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-96" y="272"/>
         </scene>
     </scenes>
     <resources>
-        <image name="comment" width="480" height="480"/>
-        <image name="like" width="2000" height="1713"/>
-        <image name="share" width="128" height="128"/>
+        <image name="UIView" width="91" height="37"/>
+        <image name="comment" width="820" height="346"/>
+        <image name="like" width="820" height="346"/>
+        <image name="share" width="820" height="346"/>
     </resources>
 </document>
