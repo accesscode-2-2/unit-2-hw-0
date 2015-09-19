@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Camera Roll View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraRollViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +17,54 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1N-jg-mjs">
+                                <rect key="frame" x="259" y="562" width="83" height="30"/>
+                                <state key="normal" title="Camera Roll">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="camerRollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dOe-wQ-vZI"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nib-P0-Mtm">
+                                <rect key="frame" x="-97" y="28" width="795" height="518"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="5zN-3V-Mad"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5zN-3V-Mad"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49305656339999998" green="0.794002133" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="n1N-jg-mjs" firstAttribute="top" secondItem="Nib-P0-Mtm" secondAttribute="bottom" constant="16" id="BPW-ZZ-1TK"/>
+                            <constraint firstItem="Nib-P0-Mtm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-97" id="FEv-66-Iw9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n1N-jg-mjs" secondAttribute="bottom" constant="8" id="JqP-mg-osa"/>
+                            <constraint firstItem="Nib-P0-Mtm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="28" id="MnF-bz-luz"/>
+                            <constraint firstItem="n1N-jg-mjs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="316" id="aBZ-8x-j1w"/>
+                            <constraint firstItem="Nib-P0-Mtm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="eqQ-t7-296"/>
+                            <constraint firstItem="Nib-P0-Mtm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="g3S-oT-P6c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nib-P0-Mtm" secondAttribute="trailing" id="ghq-tc-sip"/>
+                            <constraint firstItem="Nib-P0-Mtm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="195" id="pjJ-3C-rgf"/>
+                            <constraint firstItem="n1N-jg-mjs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t65-T6-0Mo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="eqQ-t7-296"/>
+                                <exclude reference="g3S-oT-P6c"/>
+                                <exclude reference="ghq-tc-sip"/>
+                                <exclude reference="aBZ-8x-j1w"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="cameraRollButton" destination="n1N-jg-mjs" id="Xse-6R-yeI"/>
+                        <outlet property="myImage" destination="Nib-P0-Mtm" id="mIe-w8-svb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
