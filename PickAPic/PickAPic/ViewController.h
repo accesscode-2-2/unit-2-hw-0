@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate   >;
+
+
+
+
 
 @end
 

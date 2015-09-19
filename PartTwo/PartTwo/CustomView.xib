@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZF3-YS-uEA">
+                    <rect key="frame" x="275" y="361" width="51" height="30"/>
+                    <state key="normal" title="SHARE">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shareButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="onJ-94-j7z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONU-CN-Q7V">
+                    <rect key="frame" x="261" y="285" width="79" height="30"/>
+                    <state key="normal" title="COMMENT">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="commentButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="7Ck-te-N9h"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0w-hb-VQO">
+                    <rect key="frame" x="277" y="200" width="32" height="30"/>
+                    <state key="normal" title="LIKE">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="likeButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Tog-JC-jkH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ZF3-YS-uEA" firstAttribute="top" secondItem="ONU-CN-Q7V" secondAttribute="bottom" constant="46" id="9Sb-Ai-lgW"/>
+                <constraint firstItem="ONU-CN-Q7V" firstAttribute="top" secondItem="s0w-hb-VQO" secondAttribute="bottom" constant="55" id="BOT-F9-ddb"/>
+                <constraint firstAttribute="centerX" secondItem="ONU-CN-Q7V" secondAttribute="centerX" id="Gsf-zC-Ews"/>
+                <constraint firstItem="s0w-hb-VQO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="277" id="bGS-26-YKF"/>
+                <constraint firstAttribute="centerY" secondItem="ONU-CN-Q7V" secondAttribute="centerY" id="ryT-rU-qXw"/>
+                <constraint firstAttribute="centerX" secondItem="ZF3-YS-uEA" secondAttribute="centerX" id="tML-sY-nes"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
