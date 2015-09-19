@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "SocialMediaView.h"
+#import "SocialMediaDelegate.h"
 
-@interface ViewController ()
+@interface ViewController () <SocialMediaDelegate>
+
+@property (weak, nonatomic) IBOutlet SocialMediaView *customView;
 
 @end
 
@@ -16,12 +20,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.customView.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view {
+    NSLog(@"Like Button Tapped");
+    
+    self.view.backgroundColor = [UIColor blueColor];
+}
+
+- (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view {
+    NSLog(@"Comment Button Tapped");
+    self.view.backgroundColor = [UIColor greenColor];
+}
+
+- (void)socialMediaViewDidTapShareButton:(SocialMediaView *)view {
+    NSLog(@"Share Button Tapped");
+    self.view.backgroundColor = [UIColor redColor];
 }
 
 @end

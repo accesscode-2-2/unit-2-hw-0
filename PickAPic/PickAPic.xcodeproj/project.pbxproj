@@ -35,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00DCA0DC1BAB24F800FDD223 /* UIImagePickerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImagePickerControllerDelegate.h; sourceTree = "<group>"; };
+		00DCA0DD1BAB252B00FDD223 /* UINavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerDelegate.h; sourceTree = "<group>"; };
 		8D1F73BC1BA66AE50040D369 /* PickAPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickAPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1F73C01BA66AE50040D369 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1F73C21BA66AE50040D369 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +107,8 @@
 				8D1F73C31BA66AE50040D369 /* AppDelegate.m */,
 				8D1F73C51BA66AE50040D369 /* ViewController.h */,
 				8D1F73C61BA66AE50040D369 /* ViewController.m */,
+				00DCA0DD1BAB252B00FDD223 /* UINavigationControllerDelegate.h */,
+				00DCA0DC1BAB24F800FDD223 /* UIImagePickerControllerDelegate.h */,
 				8D1F73C81BA66AE50040D369 /* Main.storyboard */,
 				8D1F73CB1BA66AE50040D369 /* Assets.xcassets */,
 				8D1F73CD1BA66AE50040D369 /* LaunchScreen.storyboard */,
@@ -207,6 +211,7 @@
 				TargetAttributes = {
 					8D1F73BB1BA66AE50040D369 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 9V5VY2T8PQ;
 					};
 					8D1F73D41BA66AE50040D369 = {
 						CreatedOnToolsVersion = 7.0;
@@ -411,11 +416,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PickAPic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feliciaweathers.PickAPic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -423,11 +431,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PickAPic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feliciaweathers.PickAPic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
