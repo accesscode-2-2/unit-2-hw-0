@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class SocialMediaView;
+
 @protocol SocialMediaDelegate <NSObject>
 
+- (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view;
 
-- (void)changeBackgroundColour;
+- (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view;
+
+- (void)socialMediaViewDidTapShareButton:(SocialMediaView *)view;
 
 @end

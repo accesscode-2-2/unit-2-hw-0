@@ -14,14 +14,17 @@
 
 - (IBAction)commentButton:(UIButton *)sender {
     
-    [self.delegate changeBackgroundColour];
+    [self.delegate socialMediaViewDidTapLikeButton:self];
 }
 
 - (IBAction)likeButton:(UIButton *)sender {
     
+    [self.delegate socialMediaViewDidTapCommentButton:self];
 }
 
 - (IBAction)sharebutton:(UIButton *)sender {
+    
+    [self.delegate socialMediaViewDidTapShareButton:self];
     
 }
 

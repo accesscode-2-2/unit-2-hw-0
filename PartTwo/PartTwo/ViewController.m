@@ -12,12 +12,22 @@
 
 @interface ViewController () <SocialMediaDelegate>
 
+@property (weak, nonatomic) IBOutlet SocialMediaView *customView;
+
 @end
 
 @implementation ViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.customView.delegate = self;
+}
+
+
 - (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view {
     NSLog(@"Like Button Tapped");
+    
     self.view.backgroundColor = [UIColor blueColor];
 }
 
