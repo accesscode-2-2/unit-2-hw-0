@@ -22,16 +22,16 @@
     //delegate is ViewController
     
     [self.delegate commentButtonTapped:self];
-    NSLog(@"Comment tapped");
+    NSLog(@"UIView Comment tapped");
 }
 
 -(IBAction)likeTapped:(UIButton*)sender {
     [self.delegate likeButtonTapped:self];
-    NSLog(@"like tapped");
+    NSLog(@"UIView like tapped");
 
 }
 -(IBAction)shareTapped:(UIButton*)sender {
     [self.delegate shareButtonTapped:self];
-    NSLog(@"share tapped");
+    NSLog(@"UIView share tapped");
 }
 @end

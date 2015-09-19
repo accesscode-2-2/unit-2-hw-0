@@ -58,7 +58,7 @@
                         <constraint firstAttribute="width" constant="130" id="fbf-uy-Ump"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                    <state key="normal" title="    Comment    " backgroundImage="greenCircle">
+                    <state key="normal" title="Comment" backgroundImage="greenCircle">
                         <color key="titleColor" red="0.34311485400826702" green="0.88882970328282829" blue="0.11477326500736866" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="default">

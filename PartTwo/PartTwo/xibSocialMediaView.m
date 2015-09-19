@@ -11,15 +11,9 @@
 #import "SocialMediaViewProtocol.h"
 
 
-
-
 @implementation xibSocialMediaView
 
-
-
 -(IBAction)commentTapped:(UIButton*)sender {
-    
-    
     [self.delegate commentButtonTapped:self];
     NSLog(@"XIB Comment tapped");
 }

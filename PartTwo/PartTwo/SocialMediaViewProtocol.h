@@ -12,7 +12,7 @@
 
 @protocol SocialMediaViewProtocol <NSObject>
 
-@required // it means that this is required
+@required
 
 //create methods in our protocol that will not return anything
 - (void)commentButtonTapped:(SocialMediaView *)view;
