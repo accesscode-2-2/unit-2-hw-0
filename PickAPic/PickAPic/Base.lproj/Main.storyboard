@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +15,34 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g35-tk-ysm">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdt-fw-tfZ">
+                                <rect key="frame" x="277" y="520" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8I-L5-OUy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="zdt-fw-tfZ" secondAttribute="centerX" id="3d7-et-urS"/>
+                            <constraint firstItem="g35-tk-ysm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5qV-Gd-8Ez"/>
+                            <constraint firstAttribute="trailing" secondItem="g35-tk-ysm" secondAttribute="trailing" id="mOZ-mF-DUK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g35-tk-ysm" secondAttribute="bottom" id="mQa-wl-QRN"/>
+                            <constraint firstItem="g35-tk-ysm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rYd-cS-Me2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zdt-fw-tfZ" secondAttribute="bottom" constant="50" id="wEz-Op-V6V"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraRollButton" destination="zdt-fw-tfZ" id="ovm-ed-G5E"/>
+                        <outlet property="myImage" destination="g35-tk-ysm" id="j5g-4I-uJv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

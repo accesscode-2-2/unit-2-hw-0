@@ -10,6 +10,12 @@
 
 @interface ViewController : UIViewController
 
+<UINavigationControllerDelegate, UIImagePickerControllerDelegate   >;
+
+
+
+- (IBAction)pickImage:(id)sender;
+
 
 @end
 
