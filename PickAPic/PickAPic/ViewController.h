@@ -14,7 +14,6 @@
 
 
 
-- (IBAction)pickImage:(id)sender;
 
 
 @end
