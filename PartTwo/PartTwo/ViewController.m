@@ -7,21 +7,28 @@
 //
 
 #import "ViewController.h"
+#import "SocialMedia.h"
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *customViewContainer;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
+    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"SocialMediaView" owner:self options:nil];
+    
+    SocialMedia *customView = [views firstObject];
+    
+    [self.customViewContainer addSubview:customView];
+    customView.frame = self.customViewContainer.bounds;
+    
+   
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end
