@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SocialMediaBackgroundProtocol.h"
+
 
 @interface ViewController : UIViewController
 
+@property (nonatomic,weak) id <SocialMediaBackgroundProtocol> delegate; 
 
 @end
 
