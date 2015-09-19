@@ -12,9 +12,10 @@
 		8D1F73C71BA66AE50040D369 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C61BA66AE50040D369 /* ViewController.m */; };
 		8D1F73CA1BA66AE50040D369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1F73C81BA66AE50040D369 /* Main.storyboard */; };
 		8D1F73CC1BA66AE50040D369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1F73CB1BA66AE50040D369 /* Assets.xcassets */; };
-		8D1F73CF1BA66AE50040D369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1F73CD1BA66AE50040D369 /* LaunchScreen.storyboard */; };
 		8D1F73DA1BA66AE50040D369 /* PickAPicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73D91BA66AE50040D369 /* PickAPicTests.m */; };
 		8D1F73E51BA66AE50040D369 /* PickAPicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73E41BA66AE50040D369 /* PickAPicUITests.m */; };
+		F792255D1BACBEE90039E347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F792255C1BACBEE90039E347 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		F792255F1BACBF6F0039E347 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F792255E1BACBF6F0039E347 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,6 @@
 		8D1F73C61BA66AE50040D369 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8D1F73C91BA66AE50040D369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D1F73CB1BA66AE50040D369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8D1F73CE1BA66AE50040D369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D1F73D01BA66AE50040D369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1F73D51BA66AE50040D369 /* PickAPicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickAPicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1F73D91BA66AE50040D369 /* PickAPicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickAPicTests.m; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		8D1F73E01BA66AE50040D369 /* PickAPicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickAPicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1F73E41BA66AE50040D369 /* PickAPicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickAPicUITests.m; sourceTree = "<group>"; };
 		8D1F73E61BA66AE50040D369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F792255C1BACBEE90039E347 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F792255E1BACBF6F0039E347 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		8D1F73B31BA66AE50040D369 = {
 			isa = PBXGroup;
 			children = (
+				F792255E1BACBF6F0039E347 /* Default-568h@2x.png */,
 				8D1F73BE1BA66AE50040D369 /* PickAPic */,
 				8D1F73D81BA66AE50040D369 /* PickAPicTests */,
 				8D1F73E31BA66AE50040D369 /* PickAPicUITests */,
@@ -107,7 +110,7 @@
 				8D1F73C61BA66AE50040D369 /* ViewController.m */,
 				8D1F73C81BA66AE50040D369 /* Main.storyboard */,
 				8D1F73CB1BA66AE50040D369 /* Assets.xcassets */,
-				8D1F73CD1BA66AE50040D369 /* LaunchScreen.storyboard */,
+				F792255C1BACBEE90039E347 /* LaunchScreen.storyboard */,
 				8D1F73D01BA66AE50040D369 /* Info.plist */,
 				8D1F73BF1BA66AE50040D369 /* Supporting Files */,
 			);
@@ -207,6 +210,7 @@
 				TargetAttributes = {
 					8D1F73BB1BA66AE50040D369 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 9WQ49EN2U5;
 					};
 					8D1F73D41BA66AE50040D369 = {
 						CreatedOnToolsVersion = 7.0;
@@ -243,7 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D1F73CF1BA66AE50040D369 /* LaunchScreen.storyboard in Resources */,
+				F792255D1BACBEE90039E347 /* LaunchScreen.storyboard in Resources */,
+				F792255F1BACBF6F0039E347 /* Default-568h@2x.png in Resources */,
 				8D1F73CC1BA66AE50040D369 /* Assets.xcassets in Resources */,
 				8D1F73CA1BA66AE50040D369 /* Main.storyboard in Resources */,
 			);
@@ -314,14 +319,6 @@
 				8D1F73C91BA66AE50040D369 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8D1F73CD1BA66AE50040D369 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8D1F73CE1BA66AE50040D369 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -411,11 +408,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PickAPic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christelladolmo.PickAPic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -423,11 +423,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PickAPic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christelladolmo.PickAPic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

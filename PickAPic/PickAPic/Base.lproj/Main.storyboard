@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +16,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PGW-jb-WXM">
+                                <rect key="frame" x="0.0" y="0.0" width="605" height="535"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRe-Yr-Ftx">
+                                <rect key="frame" x="259" y="550" width="83" height="30"/>
+                                <state key="normal" title="Camera Roll"/>
+                                <connections>
+                                    <action selector="cameraRollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="80D-5h-YQ3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TRe-Yr-Ftx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3of-yP-dnN"/>
+                            <constraint firstItem="PGW-jb-WXM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="CHD-rS-by4"/>
+                            <constraint firstItem="PGW-jb-WXM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2.5" id="Fo4-rW-Et0"/>
+                            <constraint firstItem="PGW-jb-WXM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="HF2-i3-IOC"/>
+                            <constraint firstItem="TRe-Yr-Ftx" firstAttribute="top" secondItem="PGW-jb-WXM" secondAttribute="bottom" constant="15" id="Zg9-OU-0YO"/>
+                            <constraint firstItem="TRe-Yr-Ftx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bcV-pv-lH3"/>
+                            <constraint firstItem="PGW-jb-WXM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-32.5" id="g5a-7W-aGk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PGW-jb-WXM" secondAttribute="trailing" constant="-25" id="o0Z-i3-bh5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bcV-pv-lH3"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="cameraRoll" destination="TRe-Yr-Ftx" id="tWr-t7-Sx9"/>
+                        <outlet property="imageView" destination="PGW-jb-WXM" id="G4E-c9-Z9B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

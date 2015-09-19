@@ -19,7 +19,7 @@ Your job is to create a custom view that contains 3 different buttons. A button 
 ### Considerations
 
 1) Your button actions are inside of the custom view .m file, not the view controller  
-2) The custom view should communicate to the view controller through protocol methods. The mothods are as follows:
+2) The custom view should communicate to the view controller through protocol methods. The methods are as follows:
 ```objective-c
 - (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view;
 - (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view;
