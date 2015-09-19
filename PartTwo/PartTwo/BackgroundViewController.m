@@ -13,6 +13,8 @@
 @interface BackgroundViewController ()  <CustomViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *customViewContainer;
+
+@property (nonatomic) CustomView *customView;
 @end
 
 @implementation BackgroundViewController
