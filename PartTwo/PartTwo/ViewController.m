@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "AVColorPickerCommProtocol.h"
+#import "AVSocialMediaView.h"
 
-@interface ViewController ()
+@interface ViewController () <AVColorPickerCommProtocol>
+
+@property (weak, nonatomic) IBOutlet AVSocialMediaView *customView;
+
 
 @end
 
@@ -16,12 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.customView.delegate = self;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)didSelectColor:(UIColor *)color {
+    self.view.backgroundColor = color;
 }
-
 @end

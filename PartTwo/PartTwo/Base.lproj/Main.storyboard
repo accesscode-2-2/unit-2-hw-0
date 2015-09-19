@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcy-PO-TvN" userLabel="customView" customClass="AVSocialMediaView">
+                                <rect key="frame" x="170" y="120" width="260" height="350"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pN4-rP-PRo">
+                                        <rect key="frame" x="107" y="160" width="46" height="30"/>
+                                        <state key="normal" title="Like"/>
+                                        <connections>
+                                            <action selector="likeButtonTapped:" destination="xcy-PO-TvN" eventType="touchUpInside" id="jgz-cu-Xex"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv4-PP-Jf1">
+                                        <rect key="frame" x="110" y="240" width="40" height="30"/>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="shareButtonTapped:" destination="xcy-PO-TvN" eventType="touchUpInside" id="dWX-02-ato"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecp-9P-vue">
+                                        <rect key="frame" x="96" y="80" width="67" height="30"/>
+                                        <state key="normal" title="Comment"/>
+                                        <connections>
+                                            <action selector="commentButtonTapped:" destination="xcy-PO-TvN" eventType="touchUpInside" id="uRi-bv-n2v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Ecp-9P-vue" firstAttribute="centerX" secondItem="xcy-PO-TvN" secondAttribute="centerX" id="BhL-Ec-iIS"/>
+                                    <constraint firstItem="hv4-PP-Jf1" firstAttribute="centerX" secondItem="xcy-PO-TvN" secondAttribute="centerX" id="Iqz-R9-86C"/>
+                                    <constraint firstAttribute="width" constant="260" id="QSW-Un-Ib0"/>
+                                    <constraint firstAttribute="height" constant="350" id="a4d-oV-38n"/>
+                                    <constraint firstItem="pN4-rP-PRo" firstAttribute="top" secondItem="Ecp-9P-vue" secondAttribute="bottom" constant="50" id="bJ2-9a-uGU"/>
+                                    <constraint firstItem="pN4-rP-PRo" firstAttribute="centerX" secondItem="xcy-PO-TvN" secondAttribute="centerX" id="gJy-A5-yAd"/>
+                                    <constraint firstItem="hv4-PP-Jf1" firstAttribute="top" secondItem="pN4-rP-PRo" secondAttribute="bottom" constant="50" id="wBe-44-PYd"/>
+                                    <constraint firstItem="pN4-rP-PRo" firstAttribute="centerY" secondItem="xcy-PO-TvN" secondAttribute="centerY" id="yxa-HP-scf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xcy-PO-TvN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IC1-lg-mal"/>
+                            <constraint firstItem="xcy-PO-TvN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="IbW-ur-RPO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customView" destination="xcy-PO-TvN" id="VbY-Zs-9Sw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="362"/>
         </scene>
     </scenes>
 </document>
