@@ -10,7 +10,7 @@
 #import "CustomView.h"
 #import "CustomViewDelegate.h"
 
-@interface BackgroundViewController ()
+@interface BackgroundViewController ()  <CustomViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *customViewContainer;
 @end
