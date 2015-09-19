@@ -16,7 +16,16 @@
     
     
     [self.delegate commentButtonTapped:self];
-    NSLog(@"Comment tapped");
+    NSLog(@"XIB Comment tapped");
 }
+- (IBAction)likeTapped:(UIButton *)sender {
+    [self.delegate likeButtonTapped:self];
+    NSLog(@"XIB like tapped");
+}
+- (IBAction)shareTapped:(UIButton *)sender {
+    [self.delegate shareButtonTapped:self];
+    NSLog(@"XIB share tapped");
+}
+
 
 @end

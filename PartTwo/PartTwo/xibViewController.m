@@ -41,5 +41,11 @@
 - (void)commentButtonTapped:(SocialMediaView *)view{
     self.view.backgroundColor = [UIColor colorWithRed:0.36 green:0.64 blue:0.24 alpha:1.0];
 }
+- (void)likeButtonTapped:(SocialMediaView *)view{
+    self.view.backgroundColor = [UIColor colorWithRed:0.23 green:0.42 blue:0.71 alpha:1.0];
+}
+- (void)shareButtonTapped:(SocialMediaView *)view{
+    self.view.backgroundColor = [UIColor colorWithRed:0.87 green:0.20 blue:0.20 alpha:1.0];
+}
 
 @end
