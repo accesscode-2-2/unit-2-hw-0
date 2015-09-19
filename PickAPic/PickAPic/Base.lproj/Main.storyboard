@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -16,8 +16,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Hb-R9-19B">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4B6-gz-GYr">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfn-8p-dfW">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                        <state key="normal" title="Camera Roll"/>
+                                        <connections>
+                                            <action selector="cameraRollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uIN-7j-Hhs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="yfn-8p-dfW" firstAttribute="centerX" secondItem="4B6-gz-GYr" secondAttribute="centerX" id="DWr-cT-Hdy"/>
+                                    <constraint firstItem="yfn-8p-dfW" firstAttribute="centerY" secondItem="4B6-gz-GYr" secondAttribute="centerY" id="SAg-mY-5x0"/>
+                                    <constraint firstAttribute="height" constant="50" id="TR2-AS-jwU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Hb-R9-19B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CGV-v1-GQc"/>
+                            <constraint firstItem="4B6-gz-GYr" firstAttribute="top" secondItem="6Hb-R9-19B" secondAttribute="bottom" id="HIG-ek-qYP"/>
+                            <constraint firstAttribute="trailing" secondItem="6Hb-R9-19B" secondAttribute="trailing" id="aXI-et-DMf"/>
+                            <constraint firstItem="6Hb-R9-19B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fBh-Hf-p94"/>
+                            <constraint firstItem="4B6-gz-GYr" firstAttribute="top" secondItem="6Hb-R9-19B" secondAttribute="bottom" id="fqs-PS-f1D"/>
+                            <constraint firstItem="4B6-gz-GYr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gIL-un-UlE"/>
+                            <constraint firstAttribute="trailing" secondItem="4B6-gz-GYr" secondAttribute="trailing" id="h8y-3z-rch"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4B6-gz-GYr" secondAttribute="bottom" id="pam-rg-0aD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="6Hb-R9-19B" id="oMk-bO-1VS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
