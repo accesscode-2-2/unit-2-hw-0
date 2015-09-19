@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "CustomView.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIView *customViewContainer;
 
 @end
 
@@ -16,7 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomView" owner:self options:nil];
+    CustomView *customView = [views firstObject];
+    
+    [self.customViewContainer addSubview:customView];
+    customView.frame = self.customViewContainer.bounds;
+    
 }
 
 - (void)didReceiveMemoryWarning {

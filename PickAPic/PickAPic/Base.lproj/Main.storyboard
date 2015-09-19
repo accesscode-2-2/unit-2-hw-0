@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Camera Roll View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraRollViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +16,33 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DO1-rg-QKg">
+                                <rect key="frame" x="0.0" y="20" width="600" height="530"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAl-tM-V1n">
+                                <rect key="frame" x="259" y="558" width="83" height="30"/>
+                                <state key="normal" title="Camera Roll"/>
+                                <connections>
+                                    <action selector="camerRollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hY6-kh-7C4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fAl-tM-V1n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3gQ-VV-Pia"/>
+                            <constraint firstItem="DO1-rg-QKg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8vA-a1-SuC"/>
+                            <constraint firstItem="fAl-tM-V1n" firstAttribute="top" secondItem="DO1-rg-QKg" secondAttribute="bottom" constant="8" id="Qm2-Pj-KcN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fAl-tM-V1n" secondAttribute="bottom" constant="12" id="QpQ-pi-FDS"/>
+                            <constraint firstAttribute="trailing" secondItem="DO1-rg-QKg" secondAttribute="trailing" id="TcR-Jy-Y62"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DO1-rg-QKg" secondAttribute="bottom" constant="50" id="UFp-sh-m1M"/>
+                            <constraint firstItem="DO1-rg-QKg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vxV-yP-VoU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraRollButton" destination="fAl-tM-V1n" id="nzC-Zr-h8h"/>
+                        <outlet property="myImage" destination="DO1-rg-QKg" id="E2b-gf-XYf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
