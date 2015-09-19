@@ -10,7 +10,12 @@
 #import "xibViewController.h"
 #import "SocialMediaViewProtocol.h"
 
+
+
+
 @implementation xibSocialMediaView
+
+
 
 -(IBAction)commentTapped:(UIButton*)sender {
     

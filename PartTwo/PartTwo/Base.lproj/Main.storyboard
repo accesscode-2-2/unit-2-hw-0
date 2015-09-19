@@ -94,11 +94,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcR-Xo-Sc2">
-                                <rect key="frame" x="180" y="158" width="240" height="284"/>
+                                <rect key="frame" x="230" y="200" width="140" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="RMi-5d-1uL"/>
-                                    <constraint firstAttribute="height" constant="284" id="Ydx-b3-xI0"/>
+                                    <constraint firstAttribute="width" constant="140" id="RMi-5d-1uL"/>
+                                    <constraint firstAttribute="height" constant="200" id="Ydx-b3-xI0"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -30,6 +30,7 @@
     SMVContainer.frame = self.customView.bounds;
     
     SMVContainer.delegate = self;
+    self.view.backgroundColor = [UIColor colorWithRed:0.36 green:0.64 blue:0.24 alpha:1.0];
 
 }
 
