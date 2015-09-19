@@ -15,6 +15,7 @@
 		8D1F73CF1BA66AE50040D369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1F73CD1BA66AE50040D369 /* LaunchScreen.storyboard */; };
 		8D1F73DA1BA66AE50040D369 /* PickAPicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73D91BA66AE50040D369 /* PickAPicTests.m */; };
 		8D1F73E51BA66AE50040D369 /* PickAPicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73E41BA66AE50040D369 /* PickAPicUITests.m */; };
+		A447739C1BA8F41B00349864 /* PickAPicImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A447739B1BA8F41B00349864 /* PickAPicImagePickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		8D1F73E01BA66AE50040D369 /* PickAPicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickAPicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1F73E41BA66AE50040D369 /* PickAPicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickAPicUITests.m; sourceTree = "<group>"; };
 		8D1F73E61BA66AE50040D369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A447739A1BA8F41B00349864 /* PickAPicImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickAPicImagePickerController.h; sourceTree = "<group>"; };
+		A447739B1BA8F41B00349864 /* PickAPicImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickAPicImagePickerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				8D1F73C31BA66AE50040D369 /* AppDelegate.m */,
 				8D1F73C51BA66AE50040D369 /* ViewController.h */,
 				8D1F73C61BA66AE50040D369 /* ViewController.m */,
+				A447739A1BA8F41B00349864 /* PickAPicImagePickerController.h */,
+				A447739B1BA8F41B00349864 /* PickAPicImagePickerController.m */,
 				8D1F73C81BA66AE50040D369 /* Main.storyboard */,
 				8D1F73CB1BA66AE50040D369 /* Assets.xcassets */,
 				8D1F73CD1BA66AE50040D369 /* LaunchScreen.storyboard */,
@@ -273,6 +278,7 @@
 				8D1F73C71BA66AE50040D369 /* ViewController.m in Sources */,
 				8D1F73C41BA66AE50040D369 /* AppDelegate.m in Sources */,
 				8D1F73C11BA66AE50040D369 /* main.m in Sources */,
+				A447739C1BA8F41B00349864 /* PickAPicImagePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
