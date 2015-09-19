@@ -16,8 +16,22 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kld-iE-uSm">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kld-iE-uSm" secondAttribute="bottom" id="11n-d7-TcZ"/>
+                            <constraint firstItem="kld-iE-uSm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YZJ-Ij-ujz"/>
+                            <constraint firstItem="kld-iE-uSm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Zbu-Rj-XbD"/>
+                            <constraint firstAttribute="trailing" secondItem="kld-iE-uSm" secondAttribute="trailing" id="mXS-6t-0h9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="kld-iE-uSm" id="kMf-xx-HkZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
