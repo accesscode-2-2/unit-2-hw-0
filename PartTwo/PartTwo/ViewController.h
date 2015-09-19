@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewDelegate.h"
+#import "CustomView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CustomViewDelegate>
 
 
 @end
