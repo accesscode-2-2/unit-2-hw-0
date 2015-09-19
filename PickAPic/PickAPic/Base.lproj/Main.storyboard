@@ -16,12 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Yp-qu-A8w">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="520"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aI-p5-XHh">
+                                <rect key="frame" x="250.5" y="522" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JWE-vn-sNe"/>
+                                    <constraint firstAttribute="width" constant="100" id="bEq-KP-oOj"/>
+                                    <constraint firstAttribute="width" constant="46" id="gSB-w6-vlp"/>
+                                    <constraint firstAttribute="height" constant="30" id="nji-hY-0Ib"/>
+                                </constraints>
+                                <state key="normal" title="Camera Roll"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gSB-w6-vlp"/>
+                                        <exclude reference="nji-hY-0Ib"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cameraRollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x63-W6-0FU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H04-4v-h8h">
+                                <rect key="frame" x="250.5" y="560" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CtF-hs-c9y"/>
+                                    <constraint firstAttribute="width" constant="100" id="ZEG-5c-lDV"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhotoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BgU-Rh-Bqi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Yp-qu-A8w" secondAttribute="bottom" constant="80" id="72u-Za-HRz"/>
+                            <constraint firstItem="H04-4v-h8h" firstAttribute="top" secondItem="4aI-p5-XHh" secondAttribute="bottom" constant="8" id="Cau-kW-g6k"/>
+                            <constraint firstItem="4aI-p5-XHh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DuH-KR-1GU"/>
+                            <constraint firstItem="6Yp-qu-A8w" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EHk-M2-Y7n"/>
+                            <constraint firstItem="H04-4v-h8h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LYZ-Q0-ScI"/>
+                            <constraint firstItem="4aI-p5-XHh" firstAttribute="top" secondItem="6Yp-qu-A8w" secondAttribute="bottom" constant="2" id="RBi-o8-6v1"/>
+                            <constraint firstItem="6Yp-qu-A8w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dvl-An-HSz"/>
+                            <constraint firstAttribute="trailing" secondItem="6Yp-qu-A8w" secondAttribute="trailing" id="hyV-bt-bWS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraRollButton" destination="4aI-p5-XHh" id="LWb-fZ-DQY"/>
+                        <outlet property="pictureImageView" destination="6Yp-qu-A8w" id="MvT-G0-u5U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="322"/>
+            <point key="canvasLocation" x="53" y="143"/>
         </scene>
     </scenes>
 </document>

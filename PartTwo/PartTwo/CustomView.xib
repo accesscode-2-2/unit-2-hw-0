@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.65000000000000002" contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbH-t4-lvi">
+                    <rect key="frame" x="0.0" y="200" width="600" height="200"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Comment"/>
+                    <connections>
+                        <action selector="commentButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="lxO-VQ-nCi"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0i6-8C-Ler">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Like"/>
+                    <connections>
+                        <action selector="likeButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="WCQ-Fr-ur9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzD-1F-WNZ">
+                    <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Share"/>
+                    <connections>
+                        <action selector="shareButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="fAT-lv-LBw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0i6-8C-Ler" firstAttribute="height" secondItem="ZbH-t4-lvi" secondAttribute="height" id="3P0-jV-Vrm"/>
+                <constraint firstItem="ZbH-t4-lvi" firstAttribute="top" secondItem="0i6-8C-Ler" secondAttribute="bottom" id="5Y6-rO-883"/>
+                <constraint firstAttribute="bottom" secondItem="dzD-1F-WNZ" secondAttribute="bottom" id="6ME-MZ-VlV"/>
+                <constraint firstItem="dzD-1F-WNZ" firstAttribute="top" secondItem="ZbH-t4-lvi" secondAttribute="bottom" id="FSU-LK-Jxc"/>
+                <constraint firstAttribute="trailing" secondItem="dzD-1F-WNZ" secondAttribute="trailing" id="L25-EF-NcI"/>
+                <constraint firstAttribute="trailing" secondItem="0i6-8C-Ler" secondAttribute="trailing" id="PrO-2Y-0lW"/>
+                <constraint firstItem="dzD-1F-WNZ" firstAttribute="top" secondItem="ZbH-t4-lvi" secondAttribute="bottom" id="ZCz-Pg-LGp"/>
+                <constraint firstAttribute="trailing" secondItem="ZbH-t4-lvi" secondAttribute="trailing" id="eHP-Tu-A85"/>
+                <constraint firstItem="dzD-1F-WNZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fh1-nJ-1cs"/>
+                <constraint firstItem="ZbH-t4-lvi" firstAttribute="top" secondItem="0i6-8C-Ler" secondAttribute="bottom" id="gNI-er-jpf"/>
+                <constraint firstItem="ZbH-t4-lvi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ofz-yg-1bt"/>
+                <constraint firstItem="0i6-8C-Ler" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pqo-6U-hIt"/>
+                <constraint firstItem="0i6-8C-Ler" firstAttribute="width" secondItem="dzD-1F-WNZ" secondAttribute="width" id="r7u-mn-Mh0"/>
+                <constraint firstItem="0i6-8C-Ler" firstAttribute="width" secondItem="ZbH-t4-lvi" secondAttribute="width" id="txA-Tv-X69"/>
+                <constraint firstItem="0i6-8C-Ler" firstAttribute="height" secondItem="dzD-1F-WNZ" secondAttribute="height" id="vmo-Z1-bHe"/>
+                <constraint firstItem="0i6-8C-Ler" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xca-S9-HSO"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
