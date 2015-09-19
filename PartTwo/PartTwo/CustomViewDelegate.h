@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class CustomView;
+
 @protocol CustomViewDelegate <NSObject>
+
+- (void)socialMediaViewDidTapLikeButton:(CustomView *)view;
+- (void)socialMediaViewDidTapCommentButton:(CustomView *)view;
+- (void)socialMediaViewDidTapShareButton:(CustomView *)view;
 
 @end

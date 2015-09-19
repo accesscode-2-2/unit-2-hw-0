@@ -10,4 +10,6 @@
 
 @interface CustomView : UIView
 
+@property (nonatomic, weak) id <CustomViewDelegate> delegate;
+
 @end

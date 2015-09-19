@@ -7,9 +7,12 @@
 //
 
 #import "BackgroundViewController.h"
+#import "CustomView.h"
+#import "CustomViewDelegate.h"
 
 @interface BackgroundViewController ()
 
+@property (strong, nonatomic) IBOutlet UIView *customViewContainer;
 @end
 
 @implementation BackgroundViewController
@@ -17,7 +20,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomView" owner:self options:nil];
+    self.customView = [views firstObject];
+    
+    [self.customViewContainer addSubview:self.customView];
+    self.customView.frame = self.customViewContainer.bounds;
+    
+    self.customView.delegate = self;
+    
+
 }
+
+
+- (void)socialMediaViewDidTapLikeButton:(CustomView *)view {
+    self.view.backgroundColor = [UIColor blueColor];
+}
+- (void)socialMediaViewDidTapCommentButton:(CustomView *)view {
+    self.view.backgroundColor = [UIColor greenColor];
+}
+- (void)socialMediaViewDidTapShareButton:(CustomView *)view{
+    self.view.backgroundColor = [UIColor redColor];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

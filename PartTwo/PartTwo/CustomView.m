@@ -10,4 +10,17 @@
 
 @implementation CustomView
 
+- (IBAction)likeButton:(id)sender {
+    [self.delegate socialMediaViewDidTapLikeButton:self];
+}
+
+- (IBAction)commentButton:(id)sender {
+    [self.delegate socialMediaViewDidTapCommentButton:self];
+}
+
+- (IBAction)shareButton:(id)sender {
+    [self.delegate socialMediaViewDidTapShareButton:self];
+}
+
+
 @end
