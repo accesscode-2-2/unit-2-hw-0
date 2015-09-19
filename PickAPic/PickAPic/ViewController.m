@@ -12,7 +12,41 @@
 
 @end
 
+
+
+
 @implementation ViewController
+
+- (IBAction)cameraRollButtonTapped:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    
+    picker.delegate = self;
+    
+    picker.allowsEditing = YES;
+    
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+    
+}
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *pickedImage = info[UIImagePickerControllerEditedImage];
+    
+    self.imageView.image = pickedImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
 
 
 @end

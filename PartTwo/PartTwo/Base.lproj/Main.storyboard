@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,54 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-GP-SPW" customClass="SocialMediaView">
+                                <rect key="frame" x="175" y="175" width="250" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7H-ik-NIf">
+                                        <rect key="frame" x="105" y="165" width="40" height="30"/>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="shareButtonTapped:" destination="6aN-GP-SPW" eventType="touchUpInside" id="Y6c-7I-5Gb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXr-Wy-FA6">
+                                        <rect key="frame" x="110" y="55" width="30" height="30"/>
+                                        <state key="normal" title="Like"/>
+                                        <connections>
+                                            <action selector="likeButtonTapped:" destination="6aN-GP-SPW" eventType="touchUpInside" id="9Tm-FR-ZpS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXp-D7-Eve">
+                                        <rect key="frame" x="91" y="110" width="67" height="30"/>
+                                        <state key="normal" title="Comment"/>
+                                        <connections>
+                                            <action selector="commentButtonTapped:" destination="6aN-GP-SPW" eventType="touchUpInside" id="bQj-09-RKm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94748263888888884" green="0.94748263888888884" blue="0.94748263888888884" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="5JQ-Va-CM9"/>
+                                    <constraint firstItem="UXp-D7-Eve" firstAttribute="centerY" secondItem="6aN-GP-SPW" secondAttribute="centerY" id="8mb-h1-asP"/>
+                                    <constraint firstItem="pXr-Wy-FA6" firstAttribute="centerX" secondItem="6aN-GP-SPW" secondAttribute="centerX" id="DoD-Nz-TiU"/>
+                                    <constraint firstItem="F7H-ik-NIf" firstAttribute="top" secondItem="UXp-D7-Eve" secondAttribute="bottom" constant="25" id="H2K-zd-aPC"/>
+                                    <constraint firstItem="UXp-D7-Eve" firstAttribute="centerX" secondItem="6aN-GP-SPW" secondAttribute="centerX" id="Vgm-Or-sQE"/>
+                                    <constraint firstItem="F7H-ik-NIf" firstAttribute="centerX" secondItem="6aN-GP-SPW" secondAttribute="centerX" id="hkj-gP-Ao9"/>
+                                    <constraint firstItem="UXp-D7-Eve" firstAttribute="top" secondItem="pXr-Wy-FA6" secondAttribute="bottom" constant="25" id="u5B-Td-LAO"/>
+                                    <constraint firstAttribute="width" constant="250" id="u66-Eo-f0m"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6aN-GP-SPW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5oV-Xr-e9b"/>
+                            <constraint firstItem="6aN-GP-SPW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RgX-QT-iMv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SocialMediaView" destination="6aN-GP-SPW" id="uK4-BM-o8n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
