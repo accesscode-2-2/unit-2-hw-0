@@ -19,7 +19,7 @@
 
 - (IBAction)likeButtonTapped:(UIButton *)sender {
     
-    [self.delegate customeSocialMediaViewDidTapLikeButton:self];
+    [self.delegate customSocialMediaViewDidTapLikeButton:self];
 }
 
 

@@ -12,7 +12,7 @@
 
 @protocol CustomSocialMediaDelegate <NSObject>
 
-- (void)customeSocialMediaViewDidTapLikeButton:(CustomSocialMediaView *)view;
+- (void)customSocialMediaViewDidTapLikeButton:(CustomSocialMediaView *)view;
 - (void)customSocialMediaViewDidTapCommentButton:(CustomSocialMediaView *)view;
 - (void)customSocialMediaViewDidTapShareButton:(CustomSocialMediaView *)view;
 

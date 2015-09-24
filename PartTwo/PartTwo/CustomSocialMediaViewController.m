@@ -59,7 +59,7 @@
     self.backgroundView.backgroundColor = self.vineGreen;
 }
 
--(void)customeSocialMediaViewDidTapLikeButton:(CustomSocialMediaView *)view{
+-(void)customSocialMediaViewDidTapLikeButton:(CustomSocialMediaView *)view{
     self.backgroundView.backgroundColor = self.facebookBlue;
 }
 
