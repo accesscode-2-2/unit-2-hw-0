@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SocialMediaDelegate.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<SocialMediaDelegate>
 
 
 @end
