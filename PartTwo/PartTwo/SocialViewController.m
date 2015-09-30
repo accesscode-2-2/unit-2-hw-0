@@ -23,16 +23,16 @@
     self.socialView.delegate = self;
 }
 
-- (void)didTapLikeButton:(SocialMediaView *)view {
+- (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view {
+    self.view.backgroundColor = [UIColor blueColor];
+}
+
+- (void)socialMediaViewDidTapShareButton:(SocialMediaView *)view {
     self.view.backgroundColor = [UIColor redColor];
 }
 
-- (void)didTapShareButton:(SocialMediaView *)view {
+- (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view {
     self.view.backgroundColor = [UIColor greenColor];
-}
-
-- (void)didTapCommentButton:(SocialMediaView *)view {
-    self.view.backgroundColor = [UIColor blueColor];
 }
 
 @end

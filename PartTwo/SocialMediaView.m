@@ -10,15 +10,15 @@
 
 @implementation SocialMediaView
 
-- (IBAction)likeButtonTapped:(id)sender {
+- (IBAction)likeButtonTapped:(UIButton *)sender {
     [self.delegate socialMediaViewDidTapLikeButton:self];
 }
 
-- (IBAction)shareButtonTapped:(id)sender {
+- (IBAction)shareButtonTapped:(UIButton *)sender {
     [self.delegate socialMediaViewDidTapShareButton:self];
 }
 
-- (IBAction)commentButtonTapped:(id)sender {
+- (IBAction)commentButtonTapped:(UIButton *)sender {
     [self.delegate socialMediaViewDidTapCommentButton:self];
 }
 

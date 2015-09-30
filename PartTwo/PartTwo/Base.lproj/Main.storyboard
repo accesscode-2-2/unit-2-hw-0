@@ -28,21 +28,21 @@
                                 <rect key="frame" x="280" y="285" width="40" height="30"/>
                                 <state key="normal" title="Share"/>
                                 <connections>
-                                    <action selector="shareButtonTapped:" destination="m7T-D7-w35" eventType="touchUpInside" id="zza-hC-5DE"/>
+                                    <action selector="shareButtonTapped:" destination="m7T-D7-w35" eventType="touchUpInside" id="LMC-gW-Jbf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hP7-0s-DO1">
                                 <rect key="frame" x="267" y="348" width="67" height="30"/>
                                 <state key="normal" title="Comment"/>
                                 <connections>
-                                    <action selector="commentButtonTapped:" destination="m7T-D7-w35" eventType="touchUpInside" id="vli-oV-Ase"/>
+                                    <action selector="commentButtonTapped:" destination="m7T-D7-w35" eventType="touchUpInside" id="oTe-h0-lrA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9Z-ka-mri">
                                 <rect key="frame" x="285" y="222" width="30" height="30"/>
                                 <state key="normal" title="Like"/>
                                 <connections>
-                                    <action selector="likeButtonTapped:" destination="m7T-D7-w35" eventType="touchUpInside" id="Hux-zH-Zk3"/>
+                                    <action selector="likeButtonTapped:" destination="m7T-D7-w35" eventType="touchUpInside" id="yjz-X4-H62"/>
                                 </connections>
                             </button>
                         </subviews>

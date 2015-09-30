@@ -11,6 +11,6 @@
 
 @interface SocialMediaView : UIView
 
-@property (nonatomic, weak) id<PartTwoDelegate>delegate;
+@property (nonatomic, weak) id <PartTwoDelegate> delegate;
 
 @end
