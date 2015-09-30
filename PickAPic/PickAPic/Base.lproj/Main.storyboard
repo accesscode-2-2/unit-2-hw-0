@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wsU-EO-e8b">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Camera Pic View Controller-->
         <scene sceneID="uuv-Hy-Izh">
             <objects>
-                <viewController id="wsU-EO-e8b" sceneMemberID="viewController">
+                <viewController id="wsU-EO-e8b" customClass="CameraPicViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OwE-GD-xyB"/>
                         <viewControllerLayoutGuide type="bottom" id="0Xr-AW-msk"/>
@@ -17,16 +17,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sYA-eC-jX4">
-                                <rect key="frame" x="205" y="249" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ocd-vI-rw2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="560"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9X-jl-pax">
-                                <rect key="frame" x="287" y="460" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pr6-4j-Efi">
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.21493053519999999" green="0.45322788990000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pick-a-Pic">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="wsU-EO-e8b" eventType="touchUpInside" id="GTR-Ga-Llv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pr6-4j-Efi" secondAttribute="trailing" constant="257" id="1J2-rT-crS"/>
+                            <constraint firstItem="pr6-4j-Efi" firstAttribute="top" secondItem="ocd-vI-rw2" secondAttribute="bottom" id="3Vi-WS-NKZ"/>
+                            <constraint firstItem="pr6-4j-Efi" firstAttribute="centerY" secondItem="AWR-jd-VVT" secondAttribute="centerY" id="8WN-aD-eUx"/>
+                            <constraint firstItem="0Xr-AW-msk" firstAttribute="top" secondItem="pr6-4j-Efi" secondAttribute="bottom" constant="50" id="DnI-zY-Y7e"/>
+                            <constraint firstItem="0Xr-AW-msk" firstAttribute="top" secondItem="pr6-4j-Efi" secondAttribute="bottom" constant="2" id="KQj-ub-Du7"/>
+                            <constraint firstItem="pr6-4j-Efi" firstAttribute="centerX" secondItem="AWR-jd-VVT" secondAttribute="centerX" id="Kdi-M7-BzB"/>
+                            <constraint firstItem="pr6-4j-Efi" firstAttribute="top" secondItem="ocd-vI-rw2" secondAttribute="bottom" constant="8" id="Lik-9b-1Jl"/>
+                            <constraint firstItem="ocd-vI-rw2" firstAttribute="leading" secondItem="AWR-jd-VVT" secondAttribute="leading" id="Mxk-aH-a8l"/>
+                            <constraint firstItem="ocd-vI-rw2" firstAttribute="top" secondItem="AWR-jd-VVT" secondAttribute="top" id="TMH-Q3-iIR"/>
+                            <constraint firstItem="pr6-4j-Efi" firstAttribute="leading" secondItem="AWR-jd-VVT" secondAttribute="leadingMargin" constant="257" id="TVK-09-GDn"/>
+                            <constraint firstItem="pr6-4j-Efi" firstAttribute="centerY" secondItem="AWR-jd-VVT" secondAttribute="centerY" id="VPT-ht-YiS"/>
+                            <constraint firstItem="0Xr-AW-msk" firstAttribute="top" secondItem="ocd-vI-rw2" secondAttribute="bottom" constant="40" id="Ypu-c0-FOr"/>
+                            <constraint firstAttribute="trailing" secondItem="pr6-4j-Efi" secondAttribute="trailing" id="lXa-OT-Mla"/>
+                            <constraint firstItem="pr6-4j-Efi" firstAttribute="leading" secondItem="AWR-jd-VVT" secondAttribute="leading" id="qML-XM-PZU"/>
+                            <constraint firstItem="0Xr-AW-msk" firstAttribute="top" secondItem="pr6-4j-Efi" secondAttribute="bottom" id="rT5-lJ-oO4"/>
+                            <constraint firstItem="pr6-4j-Efi" firstAttribute="top" secondItem="ocd-vI-rw2" secondAttribute="bottom" constant="8" id="wzK-FF-San"/>
+                            <constraint firstAttribute="trailing" secondItem="ocd-vI-rw2" secondAttribute="trailing" id="yAU-Of-oaP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1J2-rT-crS"/>
+                                <exclude reference="8WN-aD-eUx"/>
+                                <exclude reference="Kdi-M7-BzB"/>
+                                <exclude reference="Lik-9b-1Jl"/>
+                                <exclude reference="TVK-09-GDn"/>
+                                <exclude reference="VPT-ht-YiS"/>
+                                <exclude reference="wzK-FF-San"/>
+                                <exclude reference="DnI-zY-Y7e"/>
+                                <exclude reference="KQj-ub-Du7"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="ocd-vI-rw2" id="db4-rg-BnF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4l-iH-L5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

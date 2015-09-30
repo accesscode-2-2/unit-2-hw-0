@@ -6,43 +6,27 @@
 //  Copyright © 2015 Mike Kavouras. All rights reserved.
 //
 
-#import "CameraRollViewController.h"
+#import "CameraPicViewController.h"
 
-@interface CameraRollViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface CameraPicViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
-@property (strong, nonatomic) UIImagePickerController *image1;
-
-@property (strong, nonatomic) IBOutlet UIImageView *Image;
-
-@property (weak, nonatomic) IBOutlet UIButton *cameraRButton;
-
-
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
 @implementation CameraPicViewController
 
-- (void)viewDidLoad {
-        [super viewDidLoad];
-        self.image1 = [[UIImagePickerController alloc] init];
-        self.image1.delegate = self;
-    
-    }
+- (IBAction)buttonTapped:(id)sender{
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+    pickerController.delegate = self;
+    pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:pickerController animated:YES completion:nil];
+}
 
-- (IBAction)cameraButtonTapped:(UIButton *)sender {
-    
-        [self presentViewController:self.imagePicker animated:YES completion:nil];
-    }
-
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    
-    
-        self.Image.image = [info objectForKey:UIImagePickerControllerOriginalImage];
-        [self dismissViewControllerAnimated:NO completion:nil];
-    }
--(void)imagePickerControllerDidCancel:(UIImagePickerController *)pick didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    
-    
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    self.imageView.image = image;
     [self dismissViewControllerAnimated:YES completion:nil];
-    }
+}
+
 @end

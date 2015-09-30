@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol PartTwoDelegate <NSObject>
+@class SocialMediaView;
 
+@protocol PartTwoDelegate <NSObject>
 
 - (void)socialMediaViewDidTapLikeButton:(SocialMediaView *)view;
 - (void)socialMediaViewDidTapCommentButton:(SocialMediaView *)view;
 - (void)socialMediaViewDidTapShareButton:(SocialMediaView *)view;
-
 
 @end
