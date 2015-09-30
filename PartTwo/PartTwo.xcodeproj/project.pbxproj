@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2E09691BBC753700B0030F /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E09681BBC753700B0030F /* SocialViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1D2E096F1BBC764400B0030F /* SocialMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E096E1BBC764400B0030F /* SocialMediaView.m */; settings = {ASSET_TAGS = (); }; };
 		8DD103491BA66E0900CE483B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103481BA66E0900CE483B /* main.m */; };
 		8DD1034C1BA66E0900CE483B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1034B1BA66E0900CE483B /* AppDelegate.m */; };
-		8DD1034F1BA66E0900CE483B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1034E1BA66E0900CE483B /* ViewController.m */; };
 		8DD103521BA66E0900CE483B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD103501BA66E0900CE483B /* Main.storyboard */; };
 		8DD103541BA66E0900CE483B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DD103531BA66E0900CE483B /* Assets.xcassets */; };
 		8DD103571BA66E0900CE483B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD103551BA66E0900CE483B /* LaunchScreen.storyboard */; };
@@ -35,12 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D1B9B571BAD876900D1011B /* PartTwoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartTwoDelegate.h; sourceTree = "<group>"; };
+		1D2E09671BBC753700B0030F /* SocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialViewController.h; sourceTree = "<group>"; };
+		1D2E09681BBC753700B0030F /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
+		1D2E096D1BBC764400B0030F /* SocialMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialMediaView.h; path = ../SocialMediaView.h; sourceTree = "<group>"; };
+		1D2E096E1BBC764400B0030F /* SocialMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialMediaView.m; path = ../SocialMediaView.m; sourceTree = "<group>"; };
 		8DD103441BA66E0900CE483B /* PartTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD103481BA66E0900CE483B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DD1034A1BA66E0900CE483B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DD1034B1BA66E0900CE483B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8DD1034D1BA66E0900CE483B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8DD1034E1BA66E0900CE483B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8DD103511BA66E0900CE483B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DD103531BA66E0900CE483B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DD103561BA66E0900CE483B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,9 +107,12 @@
 			children = (
 				8DD1034A1BA66E0900CE483B /* AppDelegate.h */,
 				8DD1034B1BA66E0900CE483B /* AppDelegate.m */,
-				8DD1034D1BA66E0900CE483B /* ViewController.h */,
-				8DD1034E1BA66E0900CE483B /* ViewController.m */,
+				1D1B9B571BAD876900D1011B /* PartTwoDelegate.h */,
 				8DD103501BA66E0900CE483B /* Main.storyboard */,
+				1D2E09671BBC753700B0030F /* SocialViewController.h */,
+				1D2E09681BBC753700B0030F /* SocialViewController.m */,
+				1D2E096D1BBC764400B0030F /* SocialMediaView.h */,
+				1D2E096E1BBC764400B0030F /* SocialMediaView.m */,
 				8DD103531BA66E0900CE483B /* Assets.xcassets */,
 				8DD103551BA66E0900CE483B /* LaunchScreen.storyboard */,
 				8DD103581BA66E0900CE483B /* Info.plist */,
@@ -270,8 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD1034F1BA66E0900CE483B /* ViewController.m in Sources */,
+				1D2E09691BBC753700B0030F /* SocialViewController.m in Sources */,
 				8DD1034C1BA66E0900CE483B /* AppDelegate.m in Sources */,
+				1D2E096F1BBC764400B0030F /* SocialMediaView.m in Sources */,
 				8DD103491BA66E0900CE483B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,7 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PartTwo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PartTwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,7 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PartTwo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PartTwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +506,7 @@
 				8DD103731BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DD103741BA66E0900CE483B /* Build configuration list for PBXNativeTarget "PartTwoTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +515,7 @@
 				8DD103761BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DD103771BA66E0900CE483B /* Build configuration list for PBXNativeTarget "PartTwoUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +524,7 @@
 				8DD103791BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

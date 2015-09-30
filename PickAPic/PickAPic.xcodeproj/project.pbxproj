@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D1B9B551BAD84CF00D1011B /* CameraPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B9B541BAD84CF00D1011B /* CameraPicViewController.m */; settings = {ASSET_TAGS = (); }; };
 		8D1F73C11BA66AE50040D369 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C01BA66AE50040D369 /* main.m */; };
 		8D1F73C41BA66AE50040D369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C31BA66AE50040D369 /* AppDelegate.m */; };
-		8D1F73C71BA66AE50040D369 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F73C61BA66AE50040D369 /* ViewController.m */; };
 		8D1F73CA1BA66AE50040D369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1F73C81BA66AE50040D369 /* Main.storyboard */; };
 		8D1F73CC1BA66AE50040D369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1F73CB1BA66AE50040D369 /* Assets.xcassets */; };
 		8D1F73CF1BA66AE50040D369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1F73CD1BA66AE50040D369 /* LaunchScreen.storyboard */; };
@@ -35,12 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D1B9B531BAD84CF00D1011B /* CameraPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraPicViewController.h; sourceTree = "<group>"; };
+		1D1B9B541BAD84CF00D1011B /* CameraPicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraPicViewController.m; sourceTree = "<group>"; };
+		1D1B9B561BAD859400D1011B /* CameraProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraProtocol.h; sourceTree = "<group>"; };
 		8D1F73BC1BA66AE50040D369 /* PickAPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickAPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1F73C01BA66AE50040D369 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1F73C21BA66AE50040D369 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D1F73C31BA66AE50040D369 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8D1F73C51BA66AE50040D369 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8D1F73C61BA66AE50040D369 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8D1F73C91BA66AE50040D369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D1F73CB1BA66AE50040D369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D1F73CE1BA66AE50040D369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,9 +104,10 @@
 			children = (
 				8D1F73C21BA66AE50040D369 /* AppDelegate.h */,
 				8D1F73C31BA66AE50040D369 /* AppDelegate.m */,
-				8D1F73C51BA66AE50040D369 /* ViewController.h */,
-				8D1F73C61BA66AE50040D369 /* ViewController.m */,
 				8D1F73C81BA66AE50040D369 /* Main.storyboard */,
+				1D1B9B531BAD84CF00D1011B /* CameraPicViewController.h */,
+				1D1B9B541BAD84CF00D1011B /* CameraPicViewController.m */,
+				1D1B9B561BAD859400D1011B /* CameraProtocol.h */,
 				8D1F73CB1BA66AE50040D369 /* Assets.xcassets */,
 				8D1F73CD1BA66AE50040D369 /* LaunchScreen.storyboard */,
 				8D1F73D01BA66AE50040D369 /* Info.plist */,
@@ -270,9 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D1F73C71BA66AE50040D369 /* ViewController.m in Sources */,
 				8D1F73C41BA66AE50040D369 /* AppDelegate.m in Sources */,
 				8D1F73C11BA66AE50040D369 /* main.m in Sources */,
+				1D1B9B551BAD84CF00D1011B /* CameraPicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PickAPic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,7 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PickAPic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.PickAPic;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,25 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1I5-iS-pTM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Social View Controller-->
+        <scene sceneID="fui-V3-8ee">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="1I5-iS-pTM" customClass="SocialViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="2WF-7k-hV4"/>
+                        <viewControllerLayoutGuide type="bottom" id="EWU-Nf-1ni"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="fJD-2w-T6V">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7T-D7-w35" customClass="SocialMediaView">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="DUC-Ts-A3K"/>
+                                    <constraint firstAttribute="width" constant="240" id="w9T-PY-XSW"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3C-JX-xdW">
+                                <rect key="frame" x="280" y="285" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="m7T-D7-w35" eventType="touchUpInside" id="LMC-gW-Jbf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hP7-0s-DO1">
+                                <rect key="frame" x="267" y="348" width="67" height="30"/>
+                                <state key="normal" title="Comment"/>
+                                <connections>
+                                    <action selector="commentButtonTapped:" destination="m7T-D7-w35" eventType="touchUpInside" id="oTe-h0-lrA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9Z-ka-mri">
+                                <rect key="frame" x="285" y="222" width="30" height="30"/>
+                                <state key="normal" title="Like"/>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="m7T-D7-w35" eventType="touchUpInside" id="yjz-X4-H62"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m7T-D7-w35" firstAttribute="centerY" secondItem="fJD-2w-T6V" secondAttribute="centerY" id="4Gj-21-V9D"/>
+                            <constraint firstItem="hP7-0s-DO1" firstAttribute="top" secondItem="h3C-JX-xdW" secondAttribute="bottom" constant="33" id="O5V-Ym-JKN"/>
+                            <constraint firstItem="hP7-0s-DO1" firstAttribute="centerX" secondItem="fJD-2w-T6V" secondAttribute="centerX" id="bSK-GI-yx5"/>
+                            <constraint firstItem="h3C-JX-xdW" firstAttribute="centerY" secondItem="fJD-2w-T6V" secondAttribute="centerY" id="gcb-tz-X4E"/>
+                            <constraint firstItem="x9Z-ka-mri" firstAttribute="centerX" secondItem="fJD-2w-T6V" secondAttribute="centerX" id="heg-l7-f9v"/>
+                            <constraint firstItem="h3C-JX-xdW" firstAttribute="top" secondItem="x9Z-ka-mri" secondAttribute="bottom" constant="33" id="kuT-D1-z2i"/>
+                            <constraint firstItem="m7T-D7-w35" firstAttribute="centerX" secondItem="fJD-2w-T6V" secondAttribute="centerX" id="shh-5J-h1f"/>
+                            <constraint firstItem="h3C-JX-xdW" firstAttribute="centerX" secondItem="fJD-2w-T6V" secondAttribute="centerX" id="tb3-4H-emE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="socialView" destination="m7T-D7-w35" id="6cj-ly-yvP"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeJ-DH-hDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="522" y="-139"/>
         </scene>
     </scenes>
 </document>
