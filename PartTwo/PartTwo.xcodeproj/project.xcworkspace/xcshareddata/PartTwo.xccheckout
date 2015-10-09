@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4BB42532-DDE9-49D0-A625-B734D2094D1F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PartTwo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>30574ED234DE2144597F5C1E54D4E002E32C4ECC</key>
+		<string>https://github.com/maldonadoguitar/unit-2-hw-0.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PartTwo/PartTwo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>30574ED234DE2144597F5C1E54D4E002E32C4ECC</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/maldonadoguitar/unit-2-hw-0.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>30574ED234DE2144597F5C1E54D4E002E32C4ECC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>30574ED234DE2144597F5C1E54D4E002E32C4ECC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>unit-2-hw-0</string>
+		</dict>
+	</array>
+</dict>
+</plist>
