@@ -11,11 +11,14 @@
 @implementation SocialMedia
 
 - (IBAction)commentButton:(id)sender {
-    
+    [self.delegate tappedCommentButton:self];
 }
 - (IBAction)likeButton:(id)sender {
+    [self.delegate tappedLikeButton:self];
+    
 }
 - (IBAction)shareButton:(id)sender {
+    [self.delegate tappedShareButton:self];
 }
 
 
