@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840E44741BA9C4170000D69A /* SocialMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E44731BA9C4170000D69A /* SocialMediaView.m */; settings = {ASSET_TAGS = (); }; };
+		845883C01BAD11930073CA5D /* xibSocialMediaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845883BF1BAD11930073CA5D /* xibSocialMediaView.xib */; settings = {ASSET_TAGS = (); }; };
+		845883C31BAD11DC0073CA5D /* xibSocialMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845883C21BAD11DC0073CA5D /* xibSocialMediaView.m */; settings = {ASSET_TAGS = (); }; };
+		845883C61BAD12280073CA5D /* xibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845883C51BAD12280073CA5D /* xibViewController.m */; settings = {ASSET_TAGS = (); }; };
 		8DD103491BA66E0900CE483B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103481BA66E0900CE483B /* main.m */; };
 		8DD1034C1BA66E0900CE483B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1034B1BA66E0900CE483B /* AppDelegate.m */; };
 		8DD1034F1BA66E0900CE483B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1034E1BA66E0900CE483B /* ViewController.m */; };
@@ -35,6 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840E44721BA9C4170000D69A /* SocialMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaView.h; sourceTree = "<group>"; };
+		840E44731BA9C4170000D69A /* SocialMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaView.m; sourceTree = "<group>"; };
+		844C76791BA9CAC300A9DBB7 /* SocialMediaViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaViewProtocol.h; sourceTree = "<group>"; };
+		845883BF1BAD11930073CA5D /* xibSocialMediaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = xibSocialMediaView.xib; sourceTree = "<group>"; };
+		845883C11BAD11DC0073CA5D /* xibSocialMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xibSocialMediaView.h; sourceTree = "<group>"; };
+		845883C21BAD11DC0073CA5D /* xibSocialMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xibSocialMediaView.m; sourceTree = "<group>"; };
+		845883C41BAD12280073CA5D /* xibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xibViewController.h; sourceTree = "<group>"; };
+		845883C51BAD12280073CA5D /* xibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xibViewController.m; sourceTree = "<group>"; };
 		8DD103441BA66E0900CE483B /* PartTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD103481BA66E0900CE483B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DD1034A1BA66E0900CE483B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,7 +117,15 @@
 				8DD1034B1BA66E0900CE483B /* AppDelegate.m */,
 				8DD1034D1BA66E0900CE483B /* ViewController.h */,
 				8DD1034E1BA66E0900CE483B /* ViewController.m */,
+				840E44721BA9C4170000D69A /* SocialMediaView.h */,
+				840E44731BA9C4170000D69A /* SocialMediaView.m */,
+				844C76791BA9CAC300A9DBB7 /* SocialMediaViewProtocol.h */,
 				8DD103501BA66E0900CE483B /* Main.storyboard */,
+				845883BF1BAD11930073CA5D /* xibSocialMediaView.xib */,
+				845883C41BAD12280073CA5D /* xibViewController.h */,
+				845883C51BAD12280073CA5D /* xibViewController.m */,
+				845883C11BAD11DC0073CA5D /* xibSocialMediaView.h */,
+				845883C21BAD11DC0073CA5D /* xibSocialMediaView.m */,
 				8DD103531BA66E0900CE483B /* Assets.xcassets */,
 				8DD103551BA66E0900CE483B /* LaunchScreen.storyboard */,
 				8DD103581BA66E0900CE483B /* Info.plist */,
@@ -243,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845883C01BAD11930073CA5D /* xibSocialMediaView.xib in Resources */,
 				8DD103571BA66E0900CE483B /* LaunchScreen.storyboard in Resources */,
 				8DD103541BA66E0900CE483B /* Assets.xcassets in Resources */,
 				8DD103521BA66E0900CE483B /* Main.storyboard in Resources */,
@@ -270,8 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845883C61BAD12280073CA5D /* xibViewController.m in Sources */,
 				8DD1034F1BA66E0900CE483B /* ViewController.m in Sources */,
 				8DD1034C1BA66E0900CE483B /* AppDelegate.m in Sources */,
+				845883C31BAD11DC0073CA5D /* xibSocialMediaView.m in Sources */,
+				840E44741BA9C4170000D69A /* SocialMediaView.m in Sources */,
 				8DD103491BA66E0900CE483B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +522,7 @@
 				8DD103731BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DD103741BA66E0900CE483B /* Build configuration list for PBXNativeTarget "PartTwoTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +531,7 @@
 				8DD103761BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DD103771BA66E0900CE483B /* Build configuration list for PBXNativeTarget "PartTwoUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +540,7 @@
 				8DD103791BA66E0900CE483B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
